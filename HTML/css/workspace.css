@@ -16,7 +16,7 @@ div.container > div.workspace > div {
 
 div.container > div.workspace > div.aside {	
 	z-index : 10;
-	box-shadow : 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	box-shadow : 0 0 10px 0 rgba(0, 0, 0, 0.1);
 	}
 	
 div.container > div.workspace > div.content {
@@ -74,7 +74,7 @@ div.container > div.workspace > div.aside > div.ui-resizable-handle > ul {
 	list-style : none;
 	overflow : hidden;
 	background-color : rgba(255, 255, 255, 1);
-	box-shadow : 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	box-shadow : 0 0 10px 0 rgba(0, 0, 0, 0.1);
 	}
 	
 div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li {
