@@ -38,7 +38,7 @@ aside > ul > li > a::before {
     content : "";
     height : 1px;
     width : 0;
-    transition : width .25s ease;
+    transition : width 1.5s ease;
 	}
 
 aside > ul > li > a:hover::before {	
