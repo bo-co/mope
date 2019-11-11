@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+aside {
+	width : 100%;
+	}
+	
+aside > ul,
+aside > ul > li > ul {
+	padding : 0;
+	margin : 0;
+	list-style : none;
+	}
+	
+aside > ul > li > a,
+aside > ul > li > ul > li > a {
+	display : block;
+	width : calc(220px + (100% - 220px)/2);
+	text-decoration : none;
+	color : rgba(160, 160, 160, 1);
+	transition : color .25s ease;
+	}
+	
+aside > ul > li {
+	position : relative;
+	}
+	
+aside > ul > li > a {
+	position : inherit;
+	font-size : 1.2em;
+	line-height : 1.2em;
+	}
+	
+aside > ul > li > a::before {
+	position : absolute;
+    top : 24px;
+    left : 0;
+    z-index : 1;
+    content : "";
+    height : 1px;
+    width : 0;
+    transition : width .25s ease;
+	}
+
+aside > ul > li > a:hover::before {	
+	width : calc((100% - 220px)/3*2);
+	}
+	
+aside > ul > li > a > span,
+aside > ul > li > ul > li > a > span {
+	display : block;
+	width : 220px;
+	padding-top : 0.55em;
+	padding-bottom : 0.55em;
+	margin : 0 0 0 auto;
+	}
+	
+aside > ul > li.more > a > span {
+	padding-right : 46px;
+	}
+	
+aside > ul > li > ul > li > a {
+	font-size : 1.1em;
+	line-height : 1.1em;
+	font-weight : 300;
+	}
+	
+aside > ul > li > a + span {
+	position : absolute;
+    top : 0;
+    left : calc(220px + (100% - 220px)/2 - 46px);
+    z-index : 10;
+    width : 46px;
+    height : 46px;
+    border-radius : 50%;
+    cursor : pointer;
+    background-color : rgba(160, 160, 160, 0);
+    transition : background-color .25s ease;
+	}
+	
+aside > ul > li > a + span:hover {
+	background-color : rgba(160, 160, 160, 0.1);
+	}
+	
+aside > ul > li > a + span::before,
+aside > ul > li > a + span::after {
+	position : absolute;
+    top : calc(50% - 1px);
+    z-index : 10;
+    width : 10px;
+    height : 2px;
+    content : "";
+    background-color : rgba(120, 120, 120, 1);
+    transition : transform .25s ease;
+	}
+
+aside > ul > li > a + span::before {
+    right : calc(50% - 1px);
+	}
+	
+aside > ul > li > a + span::after {
+	left : calc(50% - 1px);
+	}
+
+aside > ul > li > a + span::after,	
+aside > ul > li.selected > a + span::before {
+    transform : rotate(-35deg);
+	}
+
+aside > ul > li > a + span::before,	
+aside > ul > li.selected > a + span::after {
+    transform : rotate(35deg);
+	}
+	
+aside > ul > li > ul {
+	height : 0;
+	overflow : hidden;
+	}
+	
+aside > ul > li.selected > ul {
+	height : 100%;
+	}
+	
+@media (min-width : 1201px) {
+	aside {
+		padding : 60px 0;
+		}
+
+	aside > ul > li > ul > li > a > span {
+		padding-left : 30px;
+		}
+	}
+	
+@media (min-width : 961px) and (max-width : 1200px) {
+	aside {
+		padding : 50px 0;
+		}
+		
+	aside > ul > li > ul > li > a > span {
+		padding-left : 25px;
+		}
+	}
+	
+@media (min-width : 721px) and (max-width : 960px) {
+	aside {
+		padding : 40px 0;
+		}
+		
+	aside > ul > li > ul > li > a > span {
+		padding-left : 20px;
+		}
+	}
+	
+@media (min-width : 481px) and (max-width : 720px) {
+	aside {
+		padding : 30px 0;
+		}
+		
+	aside > ul > li > ul > li > a > span {
+		padding-left : 15px;
+		}
+	}
+	
+@media (max-width : 480px) {
+	aside {
+		padding : 20px 0;
+		}
+	
+	aside > ul > li > ul > li > a > span {
+		padding-left : 10px;
+		}
+	}

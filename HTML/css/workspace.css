@@ -1,0 +1,350 @@
+@charset "UTF-8";
+
+div.container > div.workspace {
+	display : flex;
+	width : calc(100% - 50px);
+	height : 100%;
+	overflow : hidden;
+	}
+	
+div.container > div.workspace > div {
+	position : relative;
+	height : 100%;
+	min-width : 0;
+	overflow : visible !important;
+	}
+
+div.container > div.workspace > div.aside {	
+	z-index : 10;
+	box-shadow : 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	}
+	
+div.container > div.workspace > div.content {
+	flex : 1;
+	max-width : 100%;
+	}
+	
+div.container > div.workspace > div > div.box {
+	position : inherit;
+	width : 100%;
+	height : 100%;
+	overflow : hidden;
+	}
+
+/* resizable -- начало */
+	
+div.container > div.workspace > div.aside > div.ui-resizable-handle {
+	position : absolute;
+	display : block;
+	/* добавить комментирование ниже, если нужен resizable */
+	right : 0;
+	top : 0;
+	height : 100%;
+	/* добавить комментирование выше, если нужен resizable */
+	}
+	
+/* убрать комментирование ниже, если нужен resizable */
+/* div.container > div.workspace > div.aside > div.ui-resizable-disabled .ui-resizable-handle, 
+div.container > div.workspace > div.aside > div.ui-resizable-autohide .ui-resizable-handle { 
+	display : none; 
+	}
+	
+div.container > div.workspace > div.aside > div.ui-resizable-e {
+	cursor : ew-resize;
+	width : 4px;
+	height : 100%;
+	right : -2px;
+	top : 0;
+	background-color: rgba(100, 100, 100, 1);
+	} */
+/* убрать комментирование выше, если нужен resizable */
+	
+div.container > div.workspace > div.aside > div.ui-resizable-handle > ul {
+	display : flex;
+	justify-content : center;
+	position : absolute;
+	top : calc(50% - 30px);
+	right : calc(50% - 30px);
+	z-index : 90;
+	width : 60px;
+	height : 60px;
+	padding : 0;
+	margin : 0;
+	border-radius : 50%;
+	list-style : none;
+	overflow : hidden;
+	background-color : rgba(255, 255, 255, 1);
+	box-shadow : 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	}
+	
+div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li {
+	position : relative;
+	width : 100%;
+	height : 100%;
+	cursor : pointer;
+	}
+	
+/* div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li:first-child {
+	transform : rotate(90deg);
+	}
+	
+div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li:last-child {
+	transform : rotate(-90deg);
+	} */
+
+div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li::before,
+div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li::after {	
+	position : absolute;
+    left : calc(50% - 1px);
+    z-index : 10;
+    width : 2px;
+    height : 10px;
+    content : "";
+    background-color : rgba(120, 120, 120, 1);
+    transition : top .25s ease;
+    }
+    
+div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li::before {
+	top : calc(50% - 1px);
+	}
+	
+div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li::after {
+	bottom : calc(50% - 1px);
+	}
+
+div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li:last-child::before,    
+div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li:first-child::after {
+    transform : rotate(35deg);
+	}
+
+div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li:last-child::after, 	
+div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li:first-child::before {
+	transform : rotate(-35deg);
+	}
+	
+/* div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li:first-child {
+	background-color : rgba(140, 140, 140, 1);
+	}
+	
+div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li:last-child {
+	background-color : rgba(120, 120, 120, 1);
+	} */
+	
+/* resizable -- конец */
+/* scrollbar -- начало */
+
+div.container > div.workspace > div > div.box > div.baron {
+	position : relative;
+	overflow : hidden;
+    width : calc(100% + 50px);
+    height : 100%;
+	}
+	
+div.container > div.workspace > div > div.box > div.baron > div.baron__scroller {
+    width : 100% !important;
+    max-width : 100% !important;
+    padding : 0 50px 0 0 !important;
+    margin : 0 !important;
+    height : 100%;
+    overflow-y : scroll;
+    -ms-overflow-style : none;
+    -webkit-overflow-scrolling: touch;
+    /* remove line to customize scrollbar in iOs */
+	}
+	
+div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller::before, 
+div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller::after {
+	position : absolute;
+    left : 0;
+    z-index : 10;
+    width : 100%;
+    content : "";
+	}
+	
+div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller::before {
+    top : 0;
+    background-image : linear-gradient(to top,
+    	rgba(252, 252, 252, 0) 0%,
+    	rgba(252, 252, 252, 0.5) 50%,
+    	rgba(252, 252, 252, 1) 100%);
+    }
+    	
+div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller::after {
+    bottom : 0;
+    background-image : linear-gradient(to bottom,
+    	rgba(252, 252, 252, 0) 0%,
+    	rgba(252, 252, 252, 0.5) 50%,
+    	rgba(252, 252, 252, 1) 100%);
+    }
+	
+div.container > div.workspace > div > div.box > div.baron > div.baron__scroller::-webkit-scrollbar {
+    width : 0;
+    height : 0;
+	}
+
+div.container > div.workspace > div > div.box > div.baron > div.baron__track {
+    display : none;
+    position : absolute;
+    top : 0;
+    right : 50px;
+    bottom : 0;
+    z-index : 10;
+	}
+	
+div.container > div.workspace > div > div.box > div.baron._scrollbar > div.baron__track {
+    display : block;
+	}
+	
+div.container > div.workspace > div > div.box > div.baron > div.baron__track > div.baron__bar {
+    display : none;
+    position : absolute;
+    right : 0;    
+    z-index : 1;
+    width : 2px;
+    /* background : #999; */
+	}
+	
+div.container > div.workspace > div > div.box > div.baron._scrollbar > div.baron__track > div.baron__bar {
+    display : block;
+	}
+	
+/* scrollbar -- конец */
+	
+div.container > div.workspace > div > div.box > div.baron > div.baron__scroller > ul {
+	display : flex;
+	flex-direction : column;
+	width : 100%;
+	min-height : 100%;
+	padding : 0;
+	margin : 0;
+	list-style : none;
+	}
+
+div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller > ul > li:first-child {
+	display : flex;
+	}
+	
+div.container > div.workspace > div > div.box > div.baron > div.baron__scroller > ul > li:first-child {
+	position : relative;
+	flex : 1;
+	}
+	
+div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller > ul > li:first-child {
+	background-color : rgba(252, 252, 252, 1);
+	}
+	
+@media (min-width : 1201px) {
+	div.container > div.workspace > div.aside {
+		width : 30%;
+		max-width : 30%;
+		}
+	
+	div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li:last-child {
+		display : none;
+		}
+		
+	div.container > div.workspace > div.aside.min > div.ui-resizable-handle > ul > li:last-child {
+		display : block;
+		}
+		
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller {
+    	min-width : 345px !important;
+		}
+
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller::before, 
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller::after {
+    	height : 60px;
+    	}
+		
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller > ul > li:first-child {
+		align-items : flex-start;
+		}
+	}
+	
+@media (min-width : 961px) and (max-width : 1200px) {
+	div.container > div.workspace > div.aside {
+		width : 35%;
+		max-width : 35%;
+		}
+		
+	div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li:last-child {
+		display : none;
+		}
+		
+	div.container > div.workspace > div.aside.min > div.ui-resizable-handle > ul > li:last-child {
+		display : block;
+		}
+		
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller {
+    	min-width : 320px !important;
+		}
+		
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller::before, 
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller::after {
+    	height : 50px;
+    	}
+		
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller > ul > li:first-child {
+		align-items : flex-start;
+		}
+	}
+
+@media (min-width : 721px) and (max-width : 960px) {
+	div.container > div.workspace > div.aside {
+		width : 0;
+		max-width : 100%;
+		}
+		
+	div.container > div.workspace > div > div.box > div.baron > div.baron__scroller {
+    	min-width : 720px !important;
+		}
+		
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller::before, 
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller::after {
+    	height : 40px;
+    	}
+		
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller > ul > li:first-child {
+		align-items : center;
+		}
+	}
+		
+@media (min-width : 481px) and (max-width : 720px) {
+	div.container > div.workspace > div.aside {
+		width : 0;
+		max-width : 100%;
+		}
+		
+	div.container > div.workspace > div > div.box > div.baron > div.baron__scroller {
+    	min-width : 480px !important;
+		}
+
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller::before, 
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller::after {
+    	height : 30px;
+    	}
+		
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller > ul > li:first-child {
+		align-items : center;
+		}
+	}
+	
+@media (max-width : 480px) {
+	div.container > div.workspace > div.aside {
+		width : 0;
+		max-width : 100%;
+		}
+		
+	div.container > div.workspace > div > div.box > div.baron > div.baron__scroller {
+    	min-width : 320px !important;
+		}
+		
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller::before, 
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller::after {
+    	height : 20px;
+    	}
+		
+	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller > ul > li:first-child {
+		align-items : center;
+		}
+	}
