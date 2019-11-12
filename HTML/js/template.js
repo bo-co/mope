@@ -67,11 +67,11 @@ $(document).ready(function() {
 		aside.animate({
   			width: 0
 			}, 250, function() {
-			baron__aside.update();
-			baron__content.update();
 			if (!aside.hasClass("min")) {
 				aside.removeClass("max").addClass("min");
 				}
+			baron__aside.update();
+			baron__content.update();
 			resize();
   			});
   		/* добавить комментирование выше, если нужен resizable */
@@ -140,17 +140,7 @@ $(document).ready(function() {
   				right: 50
 				}, 250);
 			}
-		});  
-    baron__aside = baron({
-    	root: "div.baron__aside",
-        scroller: baron__scroller,
-        bar: baron__bar
-        }).autoUpdate();
-    baron__content = baron({
-    	root: "div.baron__content",
-        scroller: baron__scroller,
-        bar: baron__bar
-        }).autoUpdate();
+		});
     $("aside > ul > li > span").on("click", function() {
 		if ($(this).parent("li.more").hasClass("selected")) {
 			$(this).parent("li.more").find("ul").animate({
@@ -169,6 +159,22 @@ $(document).ready(function() {
 			$(this).parent("li.more").addClass("selected");
 			}
 		});
+    baron__aside = baron({
+    	root: "div.baron__aside",
+        scroller: baron__scroller,
+        bar: baron__bar
+        }).autoUpdate();
+    baron__content = baron({
+    	root: "div.baron__content",
+        scroller: baron__scroller,
+        bar: baron__bar
+        }).autoUpdate();
+	$("div.baron__scroller").on("scroll", $.debounce(250, true, function(){
+    	$(this).next("div.baron__track").find("div.baron__bar").css({"opacity" : "1"});
+		}));
+	$("div.baron__scroller").on("scroll", $.debounce(250, function(){
+   		$(this).next("div.baron__track").find("div.baron__bar").css({"opacity" : "0"});
+		}));
     resize();
    	return false;
 	});

@@ -206,6 +206,8 @@ div.container > div.workspace > div > div.box > div.baron > div.baron__track > d
 	
 div.container > div.workspace > div > div.box > div.baron._scrollbar > div.baron__track > div.baron__bar {
     display : block;
+    opacity : 0;
+    transition : opacity .5s ease;
 	}
 	
 /* scrollbar -- конец */
