@@ -40,7 +40,7 @@ function resize() {
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
 		$("div.container > div.workspace > div > div.box > div.baron").each(function() {
-			$(this).height(window.innerHeight - $(this).prev("div.header").outerHeight());
+			$(this).height($(this).parent("div.box").outerHeight() - $(this).prev("div.header").outerHeight());
 			});
 		baron__aside.update();
 		baron__content.update();
@@ -65,7 +65,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		/* добавить комментирование ниже, если нужен resizable */
 		aside.animate({
-  			width: 0
+  			width: 50
 			}, 250, function() {
 			if (!aside.hasClass("min")) {
 				aside.removeClass("max").addClass("min");
@@ -127,7 +127,7 @@ $(document).ready(function() {
 			} */
 		/* убрать комментирование выше, если нужен resizable */
 		});
-	$("div.container > div.panel > ul").on("click", function() {
+	$("ul.burger").on("click", function() {
 		if ($("div.container").hasClass("opened")) {
 			$("div.container").removeClass("opened").addClass("closed");
 			$("div.container > nav").animate({

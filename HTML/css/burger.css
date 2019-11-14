@@ -1,20 +1,6 @@
 @charset "UTF-8";
 
-div.container > div.panel {
-	position : absolute;
-	top : 0;
-	right : 0;
-	z-index : 120;
-	width : 50px;
-	height : 100%;
-	background-color: rgba(255, 255, 255, 1);
-	box-shadow : 0 0 5px 0 rgba(0, 0, 0, 0.1);
-	overflow : hidden;
-	}
-
-/* сандвич -- начало */
-	
-div.container > div.panel > ul {
+ul.burger {
 	position: absolute;
 	top : 0;
 	right : 0;
@@ -29,7 +15,7 @@ div.container > div.panel > ul {
 	background-color: rgba(220, 220, 220, 1);
 	}
 	
-div.container > div.panel > ul > li {
+ul.burger > li {
 	position : inherit;
 	left : 10px;
 	z-index : inherit;
@@ -41,35 +27,35 @@ div.container > div.panel > ul > li {
   	animation-duration : .25s;
 	}
 	
-div.container > div.panel > ul > li:first-child,
-div.container > div.panel > ul > li:nth-child(2) {
+ul.burger > li:first-child,
+ul.burger > li:nth-child(2) {
 	width : 25px;
 	top : calc(50% - 1px);
 	}
 	
-div.container > div.panel > ul > li:nth-child(3) {
+ul.burger > li:nth-child(3) {
 	top : 13px;
 	width : 15px;
 	}
 
-div.container > div.panel > ul > li:last-child {
+ul.burger > li:last-child {
 	bottom : 13px;
 	}
 
-div.container > div.panel > ul:hover > li:first-child,
-div.container > div.panel > ul:hover > li:nth-child(2),
-div.container > div.panel > ul:hover > li:nth-child(3),
-div.container > div.panel > ul > li:last-child,
-div.container.opened > div.panel > ul > li { 
+ul.burger:hover > li:first-child,
+ul.burger:hover > li:nth-child(2),
+ul.burger:hover > li:nth-child(3),
+ul.burger > li:last-child,
+div.container.opened ul.burger > li { 
 	width : 30px; 
 	}
 
-div.container.closed > div.panel > ul > li:first-child {
+div.container.closed ul.burger > li:first-child {
 	transform : rotate(0);  	
   	animation-name : rotate-left-down;
 	}
 
-div.container.opened > div.panel > ul > li:first-child {
+div.container.opened ul.burger > li:first-child {
 	transform : rotate(45deg);
   	animation-name : rotate-left-up;
 	}
@@ -98,12 +84,12 @@ div.container.opened > div.panel > ul > li:first-child {
   		}
 	}
 
-div.container.closed > div.panel > ul > li:nth-child(2) {
+div.container.closed ul.burger > li:nth-child(2) {
 	transform : rotate(0);
   	animation-name : rotate-right-down;
 	}
 	
-div.container.opened > div.panel > ul > li:nth-child(2) { 
+div.container.opened ul.burger > li:nth-child(2) { 
 	transform : rotate(-45deg);
 	animation-name : rotate-right-up;
 	}
@@ -132,13 +118,13 @@ div.container.opened > div.panel > ul > li:nth-child(2) {
   		}
 	}
 
-div.container.closed > div.panel > ul > li:nth-child(3) { 
+div.container.closed ul.burger > li:nth-child(3) { 
 	top : 13px;
 	transform : rotate(0);
 	animation-name : top-down;
 	}	
 	
-div.container.opened > div.panel > ul > li:nth-child(3) { 
+div.container.opened ul.burger > li:nth-child(3) { 
 	top : calc(50% - 1px);
 	transform : rotate(45deg);
 	animation-name : top-up;
@@ -175,13 +161,13 @@ div.container.opened > div.panel > ul > li:nth-child(3) {
   		}
 	}
 
-div.container.closed > div.panel > ul > li:last-child { 
+div.container.closed ul.burger > li:last-child { 
 	bottom : 13px;
 	transform : rotate(0);
 	animation-name : bottom-down;
 	}	
 	
-div.container.opened > div.panel > ul > li:last-child { 
+div.container.opened ul.burger > li:last-child { 
 	bottom : calc(50% - 1px);
 	transform : rotate(-45deg);
 	animation-name : bottom-up;
@@ -216,26 +202,4 @@ div.container.opened > div.panel > ul > li:last-child {
     	bottom : 13px;
     	transform : rotate(0);
   		}
-	}
-	
-/* сандвич -- конец */
-	
-@media (min-width : 1201px) {
-
-	}
-	
-@media (min-width : 961px) and (max-width : 1200px) {
-
-	}
-
-@media (min-width : 721px) and (max-width : 960px) {
-
-	}
-		
-@media (min-width : 481px) and (max-width : 720px) {
-	
-	}
-	
-@media (max-width : 480px) {
-
 	}

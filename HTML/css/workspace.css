@@ -2,26 +2,25 @@
 
 div.container > div.workspace {
 	display : flex;
-	width : calc(100% - 50px);
-	height : 100%;
 	overflow : hidden;
 	}
 	
 div.container > div.workspace > div {
 	position : relative;
 	height : 100%;
-	min-width : 0;
 	overflow : visible !important;
 	}
 
 div.container > div.workspace > div.aside {	
 	z-index : 10;
 	box-shadow : 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	min-width : 50px;
 	}
 	
 div.container > div.workspace > div.content {
 	flex : 1;
 	max-width : 100%;
+	min-width : 0;
 	}
 	
 div.container > div.workspace > div > div.box {
@@ -236,6 +235,11 @@ div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scr
 	}
 	
 @media (min-width : 1201px) {
+	div.container > div.workspace {
+		width : calc(100% - 50px);
+		height : 100%;
+		}
+	
 	div.container > div.workspace > div.aside {
 		width : 30%;
 		max-width : 30%;
@@ -250,7 +254,7 @@ div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scr
 		}
 		
 	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller {
-    	min-width : 345px !important;
+    	min-width : 340px !important;
 		}
 
 	div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller::before, 
@@ -264,6 +268,11 @@ div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scr
 	}
 	
 @media (min-width : 961px) and (max-width : 1200px) {
+	div.container > div.workspace {
+		width : calc(100% - 50px);
+		height : 100%;
+		}
+		
 	div.container > div.workspace > div.aside {
 		width : 35%;
 		max-width : 35%;
@@ -292,6 +301,11 @@ div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scr
 	}
 
 @media (min-width : 721px) and (max-width : 960px) {
+	div.container > div.workspace {
+		width : 100%;
+		height : calc(100% - 90px);
+		}
+
 	div.container > div.workspace > div.aside {
 		width : 0;
 		max-width : 100%;
@@ -312,6 +326,11 @@ div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scr
 	}
 		
 @media (min-width : 481px) and (max-width : 720px) {
+	div.container > div.workspace {
+		width : 100%;
+		height : calc(100% - 80px);
+		}
+
 	div.container > div.workspace > div.aside {
 		width : 0;
 		max-width : 100%;
@@ -332,6 +351,11 @@ div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scr
 	}
 	
 @media (max-width : 480px) {
+	div.container > div.workspace {
+		width : 100%;
+		height : calc(100% - 70px);
+		}
+		
 	div.container > div.workspace > div.aside {
 		width : 0;
 		max-width : 100%;

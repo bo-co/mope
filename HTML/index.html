@@ -9,14 +9,12 @@
     	<link rel="stylesheet" href="fonts/opensans/style.css?121020191240" />
     	<link rel="stylesheet" href="css/default.css?121020191240" />
     	<link rel="stylesheet" href="css/style.css?121020191240" />
-    	<link rel="stylesheet" href="css/workspace.css?121020191240" />
     	<link rel="stylesheet" href="css/header.css?121020191240" />
+    	<link rel="stylesheet" href="css/burger.css?121020191240" />
+    	<link rel="stylesheet" href="css/workspace.css?121020191240" />
     	<link rel="stylesheet" href="css/aside.css?121020191240" />
-    	
-    	
-    	<link rel="stylesheet" href="css/panel.css?121020191240" />
-    	<link rel="stylesheet" href="css/nav.css?121020191240" />
     	<link rel="stylesheet" href="css/footer.css?121020191240" />
+    	<link rel="stylesheet" href="css/nav.css?121020191240" />
     	<script defer src="js/jquery.js?121020191240"></script>
     	<script defer src="js/jquery.throttle-debounce.js?121020191240"></script>
     	<!-- убрать комментирование ниже, если нужен resizable -->
@@ -29,6 +27,22 @@
 	<body onresize="resize();" onload="resize();">
 		<div class="container">
 			<span></span>
+			
+
+			<!-- header -->
+			<header>
+				<a class="logo" href="/" title="Море здоровья">
+					<span></span>
+				</a>
+
+				<ul class="burger">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</header>
+			<!-- /header -->
 		
 			
 			<!-- workspace -->
@@ -47,53 +61,46 @@
 								<li>
 									<aside>
 										<ul>
-											<li>
-												<a class="bg-color-before color-hover" href="/catalog/sandwiches/" title="Сандвичи">
-													<span>Сандвичи</span>
-												</a>
-											</li>
-											<li>
-												<a class="bg-color-before color-hover" href="/catalog/rolls/" title="Роллы">
-													<span>Роллы</span>
-												</a>
-											</li>
-											<li>
-												<a class="bg-color-before color-hover" href="/catalog/starters/" title="Стартеры">
-													<span>Стартеры</span>
-												</a>
-											</li>
-											<li>
-												<a class="bg-color-before color-hover" href="/catalog/potato/" title="Картофель">
-													<span>Картофель</span>
-												</a>
-											</li>
-											<li class="more">
-												<a class="bg-color-before color-hover" href="/catalog/drinks/" title="Напитки">
-													<span>Напитки</span>
+											<li class="more selected">
+												<a class="bg-color-before color-hover" href="/catalog/salt/" title="Соль для ванны">
+													<span class="icon salt">Соль для ванны</span>
 												</a>
 												<span></span>
 												<ul>
 													<li>
-														<a class="color-hover" href="/catalog/drinks/soft/" title="Прохладительные">
-															<span>Прохладительные</span>
+														<a class="color-hover" href="/catalog/salt/adult/" title="Взрослым">
+															<span>Взрослым</span>
 														</a>
 													</li>
 													<li>
-														<a class="color-hover" href="/catalog/drinks/hot/" title="Чай, кофе">
-															<span>Чай, кофе</span>
+														<a class="color-hover" href="/catalog/salt/children/" title="Детям">
+															<span>Детям</span>
 														</a>
 													</li>
 												</ul>
 											</li>
-											<li>
-												<a class="bg-color-before color-hover" href="/catalog/desserts/" title="Десерты">
-													<span>Десерты</span>
+											<li class="more selected">
+												<a class="bg-color-before color-hover" href="/catalog/lamp/" title="Солевые лампы и подсвечники">
+													<span class="icon lamp">Солевые лампы и подсвечники</span>
 												</a>
-											</li>
-											<li>
-												<a class="bg-color-before color-hover" href="/catalog/salads/" title="Салаты">
-													<span>Салаты</span>
-												</a>
+												<span></span>
+												<ul>
+													<li>
+														<a class="color-hover" href="/catalog/lamp/1/" title="Лампы">
+															<span>Лампы</span>
+														</a>
+													</li>
+													<li>
+														<a class="color-hover" href="/catalog/lamp/2/" title="Подсвечники">
+															<span>Подсвечники</span>
+														</a>
+													</li>
+													<li>
+														<a class="color-hover" href="/catalog/lamp/3/" title="Комплектующие">
+															<span>Комплектующие</span>
+														</a>
+													</li>
+												</ul>
 											</li>
 										</ul>
 									</aside>					
@@ -110,12 +117,7 @@
 				</div>
 				<div class="content">
 					<div class="box">
-				
-					<div class="header">
-						<a class="logo" href="/" title="Море здоровья">
-							<span></span>
-						</a>
-					</div>
+
 					<div class="baron baron__content">
 						<div class="baron__scroller">
 							<ul>
@@ -139,18 +141,6 @@
 				</div>
 			</div>
 			<!-- /workspace -->
-			
-			
-			<!-- panel -->
-			<div class="panel">
-				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
-			</div>
-			<!-- /panel -->
 			
 			
 			<!-- nav -->
