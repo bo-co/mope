@@ -2,7 +2,6 @@
 
 ul.burger {
 	position: absolute;
-	top : 0;
 	right : 0;
 	z-index: 10;
 	width: 50px;
@@ -12,7 +11,7 @@ ul.burger {
 	list-style : none;
 	cursor : pointer;
 	overflow : hidden;
-	background-color: rgba(220, 220, 220, 1);
+	background-color: rgba(220, 220, 220, 0);
 	}
 	
 ul.burger > li {
@@ -202,4 +201,34 @@ div.container.opened ul.burger > li:last-child {
     	bottom : 13px;
     	transform : rotate(0);
   		}
+	}
+
+@media (min-width : 1201px) {
+	ul.burger {
+		top : 0;
+		}	
+	}
+	
+@media (min-width : 961px) and (max-width : 1200px) {
+	ul.burger {
+		top : 0;
+		}	
+	}
+	
+@media (min-width : 721px) and (max-width : 960px) {
+	ul.burger {
+		top : 15px;
+		}
+	}
+		
+@media (min-width : 481px) and (max-width : 720px) {
+	ul.burger {
+		top : 10px;
+		}	
+	}
+
+@media (max-width : 480px) {
+	ul.burger {
+		top : 5px;
+		}
 	}

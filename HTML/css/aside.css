@@ -1,11 +1,9 @@
 @charset "UTF-8";
 
-aside {
-	width : 100%;
-	}
-	
+aside,	
 aside > ul,
 aside > ul > li > ul {
+	width : 100%;
 	padding : 0;
 	margin : 0;
 	list-style : none;
@@ -14,7 +12,9 @@ aside > ul > li > ul {
 aside > ul > li > a,
 aside > ul > li > ul > li > a {
 	display : block;
-	width : calc(220px + (100% - 220px)/2);
+	width : calc(170px + (100% - 170px)/2 + 50px);
+	padding-left : 50px;
+	padding-right : 50px;
 	line-height : calc(1em/3 + 1em);
 	text-decoration : none;
 	color : rgba(160, 160, 160, 1);
@@ -28,7 +28,6 @@ aside > ul > li {
 aside > ul > li > a {
 	position : inherit;
 	font-size : 1.2em;
-	padding-left : 50px;
 	}
 	
 /* aside > ul > li > a::before {
@@ -50,7 +49,7 @@ aside > ul > li > a > span,
 aside > ul > li > ul > li > a > span {
 	position : inherit;
 	display : block;
-	width : 220px;
+	width : 170px;
 	margin : 0 0 0 auto;
 	}
 
@@ -60,7 +59,7 @@ aside > ul > li > a > span {
 	}
 	
 aside > ul > li.more > a > span {
-	padding-right : 50px;
+	padding-right : 25px;
 	}
 	
 aside > ul > li > a > span.icon::after {
@@ -87,7 +86,7 @@ aside > ul > li > a > span.icon.lamp::after {
 aside > ul > li > a + span {
 	position : absolute;
     top : 0;
-    left : calc(220px + (100% - 220px)/2 - 46px);
+    left : calc(170px + (100% - 170px)/2 - 25px);
     z-index : 10;
     width : 50px;
     height : 50px;

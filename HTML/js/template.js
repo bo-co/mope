@@ -1,7 +1,5 @@
 var aside = $("div.container > div.workspace > div.aside"),
-	/* убрать комментирование ниже, если нужен resizable */
-	/* asideWidth = null, */
-	/* убрать комментирование выше, если нужен resizable */	
+	asideWidth = null,
 	vhCSS = null,
 	menuHeight = null,
 	baron__aside = null,
@@ -18,20 +16,15 @@ function loadCSS(source, type) {
 	}
 	
 function resize() {
-	/* убрать комментирование ниже, если нужен resizable */
-	/* if (window.innerWidth > 1200) {
+	if (window.innerWidth > 1200) {
 		asideWidth = Math.round(aside.parent().innerWidth()*0.3);
 		}
 	else if (window.innerWidth < 1201 && window.innerWidth > 960) {
 		asideWidth = Math.round(aside.parent().innerWidth()*0.35);
 		}
-	else if (window.innerWidth < 961 && window.innerWidth > 720) {
-		asideWidth = Math.round(aside.parent().innerWidth()*0.4);
-		}
 	else {
-		asideWidth = 0;
-		} */
-	/* убрать комментирование выше, если нужен resizable */		
+		asideWidth = Math.round(aside.parent().innerWidth() - 50);
+		}	
 	if (!vhCSS) {
 		loadCSS('css/vh.css?' + $.now(), 'stylesheet');
 		vhCSS = true;
@@ -39,15 +32,25 @@ function resize() {
 	setTimeout(function() {
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
-		$("div.container > div.workspace > div > div.box > div.baron").each(function() {
-			$(this).height($(this).parent("div.box").outerHeight() - $(this).prev("div.header").outerHeight());
-			});
 		baron__aside.update();
 		baron__content.update();
 		}, 50);
+	if (aside.hasClass("max")) {
+		aside.width(asideWidth);
+		}
 	}
 
 $(document).ready(function() {
+	if (aside.outerWidth() >= 270) {
+		if (!aside.hasClass("max")) {
+			aside.removeClass("min").addClass("max");
+			}
+		}
+	else {
+		if (!aside.hasClass("min")) {
+			aside.removeClass("max").addClass("min");
+			}		
+		}
 	/* убрать комментирование ниже, если нужен resizable */
 	/* aside.resizable({
 		handles : "e",
@@ -59,24 +62,33 @@ $(document).ready(function() {
 		}); */
 	/* убрать комментирование выше, если нужен resizable */
 	if (aside.find("div.ui-resizable-handle").lenght !== 0) {
-		aside.find("div.ui-resizable-handle").append('<ul><li class="bg-color-before bg-color-after"></li><li class="bg-color-before bg-color-after"></li></ul>');
+		aside.find("div.ui-resizable-handle").append('<ul><li></li></ul>');
 		}
 	aside.find("div.ui-resizable-handle > ul > li:first-child").on("touchstart mousedown", function(e) {
 		e.preventDefault();
-		/* добавить комментирование ниже, если нужен resizable */
-		aside.animate({
-  			width: 50
-			}, 250, function() {
-			if (!aside.hasClass("min")) {
-				aside.removeClass("max").addClass("min");
-				}
-			baron__aside.update();
-			baron__content.update();
-			resize();
-  			});
-  		/* добавить комментирование выше, если нужен resizable */
-		/* убрать комментирование ниже, если нужен resizable */
-		/* if (Math.round(aside.width()) > asideWidth) {
+		if (!aside.hasClass("min") && aside.hasClass("max")) {
+			aside.removeClass("max").addClass("min");
+			aside.animate({
+  				width: 50
+				}, 250, function() {
+				baron__aside.update();
+				baron__content.update();
+  				});
+			}
+		else {
+			aside.removeClass("min").addClass("max");
+			aside.animate({
+  				width: asideWidth
+				}, 250, function() {
+				baron__aside.update();
+				baron__content.update();
+				});
+			}
+		});		
+	/* убрать комментирование ниже, если нужен resizable */	
+	/* aside.find("div.ui-resizable-handle > ul > li:first-child").on("touchstart mousedown", function(e) {
+		e.preventDefault();
+		if (Math.round(aside.width()) > asideWidth) {
 			aside.animate({
   				width: asideWidth
 				}, 250, function() {
@@ -91,25 +103,11 @@ $(document).ready(function() {
 				window.baron__aside.update();
 				window.baron__content.update();
   				});
-			} */
-		/* убрать комментирование выше, если нужен resizable */
+			}
 		});
 	aside.find("div.ui-resizable-handle > ul > li:last-child").on("touchstart mousedown", function(e) {
 		e.preventDefault();
-		/* добавить комментирование ниже, если нужен resizable */
-		if (!aside.hasClass("max")) {
-			aside.removeClass("min").addClass("max");
-			}
-		aside.animate({
-  			width: "100%"
-			}, 250, function() {
-			baron__aside.update();
-			baron__content.update();
-			resize();
-			});
-  		/* добавить комментирование выше, если нужен resizable */
-		/* убрать комментирование ниже, если нужен resizable */
-		/* if (Math.round(aside.width()) >= asideWidth) {
+		if (Math.round(aside.width()) >= asideWidth) {
 			aside.animate({
   				width: aside.parent().innerWidth()
 				}, 250, function() {
@@ -124,9 +122,9 @@ $(document).ready(function() {
 				window.baron__aside.update();
 				window.baron__content.update();
   				});
-			} */
-		/* убрать комментирование выше, если нужен resizable */
+			}
 		});
+	/* убрать комментирование выше, если нужен resizable */
 	$("ul.burger").on("click", function() {
 		if ($("div.container").hasClass("opened")) {
 			$("div.container").removeClass("opened").addClass("closed");
