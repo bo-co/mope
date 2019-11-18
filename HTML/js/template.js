@@ -3,7 +3,7 @@ var aside = $("div.container > div.workspace > div.aside"),
 	vhCSS = null,
 	menuHeight = null,
 	baron__aside = null,
-	baron__content = null,
+	baron__article = null,
 	baron__scroller = "div.baron > div.baron__scroller",
 	baron__bar = "div.baron > div.baron__track > div.baron__bar";
 
@@ -17,10 +17,10 @@ function loadCSS(source, type) {
 	
 function resize() {
 	if (window.innerWidth > 1200) {
-		asideWidth = Math.round(aside.parent().innerWidth()*0.3);
+		asideWidth = Math.round(aside.parent().innerWidth()*0.24);
 		}
 	else if (window.innerWidth < 1201 && window.innerWidth > 960) {
-		asideWidth = Math.round(aside.parent().innerWidth()*0.35);
+		asideWidth = Math.round(aside.parent().innerWidth()*0.3);
 		}
 	else {
 		asideWidth = Math.round(aside.parent().innerWidth() - 50);
@@ -33,7 +33,7 @@ function resize() {
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
 		baron__aside.update();
-		baron__content.update();
+		baron__article.update();
 		}, 50);
 	if (aside.hasClass("max")) {
 		aside.width(asideWidth);
@@ -57,7 +57,7 @@ $(document).ready(function() {
 		minWidth : 0,
 		resize : function() {
 			window.baron__aside.update();
-			window.baron__content.update();
+			window.baron__article.update();
 			}
 		}); */
 	/* убрать комментирование выше, если нужен resizable */
@@ -72,7 +72,7 @@ $(document).ready(function() {
   				width: 50
 				}, 250, function() {
 				baron__aside.update();
-				baron__content.update();
+				baron__article.update();
   				});
 			}
 		else {
@@ -81,7 +81,7 @@ $(document).ready(function() {
   				width: asideWidth
 				}, 250, function() {
 				baron__aside.update();
-				baron__content.update();
+				baron__article.update();
 				});
 			}
 		});		
@@ -93,7 +93,7 @@ $(document).ready(function() {
   				width: asideWidth
 				}, 250, function() {
 				window.baron__aside.update();
-				window.baron__content.update();
+				window.baron__article.update();
   				});
 			}
 		else {
@@ -101,7 +101,7 @@ $(document).ready(function() {
   				width: 0
 				}, 250, function() {
 				window.baron__aside.update();
-				window.baron__content.update();
+				window.baron__article.update();
   				});
 			}
 		});
@@ -112,7 +112,7 @@ $(document).ready(function() {
   				width: aside.parent().innerWidth()
 				}, 250, function() {
 				window.baron__aside.update();
-				window.baron__content.update();
+				window.baron__article.update();
   				});
 			}
 		else {
@@ -120,7 +120,7 @@ $(document).ready(function() {
   				width: asideWidth
 				}, 250, function() {
 				window.baron__aside.update();
-				window.baron__content.update();
+				window.baron__article.update();
   				});
 			}
 		});
@@ -162,15 +162,15 @@ $(document).ready(function() {
         scroller: baron__scroller,
         bar: baron__bar
         }).autoUpdate();
-    baron__content = baron({
-    	root: "div.baron__content",
+    baron__article = baron({
+    	root: "div.baron__article",
         scroller: baron__scroller,
         bar: baron__bar
         }).autoUpdate();
 	$("div.baron__scroller").on("scroll", $.debounce(250, true, function(){
     	$(this).next("div.baron__track").find("div.baron__bar").css({"opacity" : "1"});
 		}));
-	$("div.baron__scroller").on("scroll", $.debounce(250, function(){
+	$("div.baron__scroller").on("scroll", $.debounce(1000, function(){
    		$(this).next("div.baron__track").find("div.baron__bar").css({"opacity" : "0"});
 		}));
     resize();
