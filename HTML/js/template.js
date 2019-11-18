@@ -16,10 +16,7 @@ function loadCSS(source, type) {
 	}
 	
 function resize() {
-	if (window.innerWidth > 1200) {
-		asideWidth = Math.round(aside.parent().innerWidth()*0.24);
-		}
-	else if (window.innerWidth < 1201 && window.innerWidth > 960) {
+	if (window.innerWidth > 960) {
 		asideWidth = Math.round(aside.parent().innerWidth()*0.3);
 		}
 	else {
