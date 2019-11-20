@@ -1,39 +1,84 @@
 @charset "UTF-8";
 
-div.container > div.workspace > div > div.box > div.phone {
+aside,
+div.container > div.workspace > div.aside > div.box > div.phone,
+div.container > div.workspace > div.aside > div.box > div.header {
+	width : 100%;
+	min-width : 14em;
+	padding : 0.5rem 0;
+	background-color : rgba(252, 252, 252, 1);
+	}
+	
+div.container > div.workspace > div.aside > div.box > div.header > a.logo {
+	width : 9em;
+	margin : 0 auto;
+	}
+	
+div.container > div.workspace > div.aside > div.box > div.header > a.logo > span {
+	width : 100%;
+	height : 100%;
+	background-repeat : no-repeat;
+	background-size : contain;
+	background-position : 50% 50%;
+	background-image : url("../img/logo.svg?091020191529");
+	}
+	
+div.container > div.workspace > div.aside > div.box > div.phone {
 	position : absolute;
 	bottom : 0;
 	left : 0;
 	z-index : 10;
-	width : 100%;
-	min-width : 270px;
-	height : 50px;
-	padding : 0 50px;
-	background-color : rgba(252, 252, 252, 1);
 	}
 	
-div.container > div.workspace > div > div.box > div.phone > a {
+div.container > div.workspace > div.aside > div.box > div.phone > a {
 	position : relative;
-	display : block;
-	max-width : 170px;
-	height : inherit;
-	margin : 0 auto;
-	font-size : 0.8em;
-	line-height : 50px;
+	width : 9em;
+	height : 2.5em;
+	margin : 0.5rem auto 0 auto;
 	text-decoration : none;
-	white-space : nowrap;
-	color : rgba(100, 100, 100, 1);
-	transition : color .25s ease;
-	}
-	
-div.container > div.workspace > div > div.box > div.phone > a:hover {
-	color : rgba(0, 0, 0, 1);
+	border-radius : 1.25em;
+	background-color : rgba(105, 155, 245, 1);
+	color : rgba(255, 255, 255, 1);
+	overflow : hidden;
 	}
 
-aside {
+div.container > div.workspace > div.aside > div.box > div.header > a.logo,
+div.container > div.workspace > div.aside > div.box > div.header > a.logo > span,	
+div.container > div.workspace > div.aside > div.box > div.phone > a,
+div.container > div.workspace > div.aside > div.box > div.phone > a > span {
+	display : block;
+	text-align : center;
+	}
+	
+div.container > div.workspace > div.aside > div.box > div.phone > a > span {
+	position : absolute;
+	left : 0;
+	top : calc(50% - 0.5em);
+	z-index : 2;
 	width : 100%;
-	min-width : 270px;
-	padding : 1rem 0;
+	font-size : 0.8em;
+	font-weight : 500;
+	line-height : 1em;
+	}	
+	
+div.container > div.workspace > div.aside > div.box > div.phone > a::before {
+	position : absolute;
+	top : calc(50% - 1.25em);
+	left : calc(50% - 4.5em);
+	z-index : 1;
+	width : 100%;
+	height : 100%;
+	border-radius : 1.25em;
+	background-color: rgba(50, 90, 150, 1);
+	content : "";
+	transform : scale(0);
+	opacity : 0;
+	transition : all .25s ease;
+	}
+	
+div.container > div.workspace > div.aside > div.box > div.phone > a:hover::before {
+	transform : scale(1);
+	opacity : 1;
 	}
 
 aside > ul,
@@ -47,119 +92,109 @@ aside > ul > li > ul {
 aside > ul > li,	
 aside > ul > li > ul > li {
 	position : relative;
-	font-size : 0.9em;
-	line-height : 1.35em;
 	}
-	
-/* aside > ul > li {
-	font-size : 0.8em;
-	}
-	
-aside > ul > li > ul > li {
-	font-size : 0.875em;
-	} */
 	
 aside > ul > li > a,
 aside > ul > li > ul > li > a,
 aside > ul > li > div,
 aside > ul > li > ul > li > div {
 	position : inherit;
-	width : calc(170px + (100% - 170px)/2 + 50px);
-	padding-left : 50px;
-	padding-right : 50px;
+	width : calc(9em + (100% - 9em)/2 + 2.5em);
+	padding-left : 2.5em;
+	padding-right : 2.5em;
+	}
+	
+aside > ul > li > a > span > span,
+aside > ul > li > div > span > span,
+aside > ul > li > ul > li > a > span > span,
+aside > ul > li > ul > li > div > span > span,
+aside > ul > li > div > strong > span,
+aside > ul > li > div > p > span {
+	display : block;
+	}
+	
+aside > ul > li > a > span > span,
+aside > ul > li > div > span > span,
+aside > ul > li > div > strong > span {
+	font-size : 0.9em;
+	line-height : 1.35em;
+	}
+	
+aside > ul > li > ul > li > a > span > span,
+aside > ul > li > ul > li > div > span > span,
+aside > ul > li > div > p > span {
+	font-size : 0.8em;
+	line-height : 1.375em;
 	}
 	
 aside > ul > li > a,
 aside > ul > li > ul > li > a {
 	display : block;
 	text-decoration : none;
-	color : rgba(100, 100, 100, 1);
+	color : rgba(180, 180, 180, 1);
 	transition : color .25s ease;	
 	}
-	
-/* aside > ul > li > a::before {
-	position : absolute;
-    top : 24px;
-    left : 0;
-    z-index : 1;
-    content : "";
-    height : 1px;
-    width : 0;
-    transition : width .25s ease;
-	}
-
-aside > ul > li > a:hover::before {	
-	width : calc((100% - 220px)/3*2);
-	} */
 	
 aside > ul > li > a > span,
 aside > ul > li > ul > li > a > span,
 aside > ul > li > div > span,
 aside > ul > li > ul > li > div > span,
 aside > ul > li > div > strong,
-aside > ul > li > ul > li > div > strong {
+aside > ul > li > ul > li > div > strong,
+aside > ul > li > div > p {
 	position : inherit;
 	display : block;
-	width : 170px;
+	max-width : 9em;
 	margin : 0 0 0 auto;
 	}
 
 aside > ul > li > strong,
 aside > ul > li > a > span,
 aside > ul > li > div > span,
-aside > ul > li > div > strong {	
-	padding-top : 13px;
-	padding-bottom : 13px;
+aside > ul > li > div > strong,
+aside > ul > li > div > p {	
+	padding-top : 0.65em;
+	padding-bottom : 0.65em;
 	}
-	
-/* aside > ul > li.more > a > span,
-aside > ul > li.more > div > span,
-aside > ul > li.more > div > strong {
-	padding-right : 25px;
-	} */
 	
 aside > ul > li > a > span.icon::after,
 aside > ul > li > div > span.icon::after {
 	position : absolute;
-	top : 15px;
+	top : 0;
 	right : 100%;
 	z-index : 1;
-	width : 50px;
-	height : 20px;
-	content : "";
+	width : 2.5em;
 	background-repeat : no-repeat;
-	background-size : contain;
+	background-size : 1em auto;
 	background-position : 50% 50%;
+	font-size : 1em;
+	font-family : "icomoon" !important;
+	text-align : center;
+	line-height : 2.5em;
 	}
 	
 aside > ul > li > a > span.icon.salt::after,
 aside > ul > li > div > span.icon.salt::after {
-	background-image : url("../img/salt.svg?141120191231");
+	/* background-image : url("../img/salt.svg?141120191231"); */
+	content : "\e900";
 	}
 	
 aside > ul > li > a > span.icon.lamp::after,
 aside > ul > li > div > span.icon.lamp::after {
-	background-image : url("../img/lamp.svg?141120191231");
+	/* background-image : url("../img/lamp.svg?141120191231"); */
+	content : "\e901";
 	}
 	
 aside > ul > li > a + span,
 aside > ul > li > div + span {
 	position : absolute;
     top : 0;
-    left : calc(170px + (100% - 170px)/2);
+    left : calc(9em + (100% - 9em)/2);
     z-index : 10;
-    width : 50px;
-    height : 50px;
-    border-radius : 50%;
+    width : 2.5em;
+    height : 2.5em;
     cursor : pointer;
-    /* background-color : rgba(180, 180, 180, 0);
-    transition : background-color .25s ease; */
 	}
-	
-/* aside > ul > li > a + span:hover,
-aside > ul > li > div + span:hover {
-	background-color : rgba(180, 180, 180, 0.1);
-	} */
 	
 aside > ul > li > a + span::before,
 aside > ul > li > a + span::after,
@@ -168,21 +203,28 @@ aside > ul > li > div + span::after {
 	position : absolute;
     top : calc(50% - 1px);
     z-index : 10;
-    width : 10px;
+    width : 0.5em;
     height : 2px;
     content : "";
     background-color : rgba(180, 180, 180, 1);
-    transition : transform .25s ease;
+    transition : all .25s ease;
+	}
+	
+aside > ul > li > a + span:hover::before,
+aside > ul > li > a + span:hover::after,
+aside > ul > li > div + span:hover::before,
+aside > ul > li > div + span:hover::after {
+    background-color : rgba(105, 155, 245, 1);
 	}
 
 aside > ul > li > a + span::before,
 aside > ul > li > div + span::before {
-   	right : 32px;
+   	right : calc(50% - 1px);
 	}
 	
 aside > ul > li > a + span::after,
 aside > ul > li > div + span::after {
-	left : 0;
+	left : calc(50% - 1px);
 	}
 
 aside > ul > li > a + span::after,	
@@ -210,22 +252,21 @@ aside > ul > li.selected > ul {
 	
 aside > ul > li > ul > li > a > span,
 aside > ul > li > ul > li > div > span {
-	padding-top : 9px;
-	padding-bottom : 9px;
+	padding-top : 0.45em;
+	padding-bottom : 0.45em;
 	padding-left : 0.5rem;
 	}
 	
-@media (min-width : 1201px) {
+@media (min-width : 961px) {
+	div.container > div.workspace > div.aside > div.box > div.header > a.logo {
+		height : 4.5em;
+		}
 	}
 	
-@media (min-width : 961px) and (max-width : 1200px) {
-	}
-	
-@media (min-width : 721px) and (max-width : 960px) {
-	}
-	
-@media (min-width : 481px) and (max-width : 720px) {
-	}
-	
-@media (max-width : 480px) {
+@media (max-width : 960px) {
+	div.container > div.workspace > div.aside > div.box > div.header {
+		height : 0;
+		padding : 0;
+		display : none;
+		}
 	}

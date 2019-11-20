@@ -1,5 +1,7 @@
 var aside = $("div.container > div.workspace > div.aside"),
 	asideWidth = null,
+	asidePhone = 0,
+	asideHeader = 0,
 	vhCSS = null,
 	menuHeight = null,
 	baron__aside = null,
@@ -20,15 +22,24 @@ function resize() {
 		asideWidth = Math.round(aside.parent().innerWidth()*0.3);
 		}
 	else {
-		asideWidth = Math.round(aside.parent().innerWidth() - 50);
+		asideWidth = "100%";
 		}	
 	if (!vhCSS) {
-		loadCSS('css/vh.css?' + $.now(), 'stylesheet');
+		loadCSS("css/vh.css?" + $.now(), "stylesheet");
 		vhCSS = true;
+		}
+	if ($("div.container > div.workspace > div.aside > div.box > div.phone").lenght !== 0) {
+		asidePhone = $("div.container > div.workspace > div.aside > div.box > div.phone").outerHeight();
+		}
+	if ($("div.container > div.workspace > div.aside > div.box > div.header").lenght !== 0) {
+		asideHeader = $("div.container > div.workspace > div.aside > div.box > div.header").outerHeight();
 		}
 	setTimeout(function() {
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
+		$("div.container > div.workspace > div.aside > div.box > div.baron").css({
+			"height" : Math.round($("div.container > div.workspace > div.aside > div.box").outerHeight() - asideHeader - asidePhone) + "px"
+			});
 		baron__aside.update();
 		baron__article.update();
 		}, 50);
@@ -66,7 +77,7 @@ $(document).ready(function() {
 		if (!aside.hasClass("min") && aside.hasClass("max")) {
 			aside.removeClass("max").addClass("min");
 			aside.animate({
-  				width: 50
+  				width: 0
 				}, 250, function() {
 				baron__aside.update();
 				baron__article.update();
