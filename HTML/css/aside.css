@@ -162,14 +162,14 @@ aside > ul > li > div > span.icon::after {
 	top : 0;
 	right : 100%;
 	z-index : 1;
-	width : 2.5em;
+	width : 2.1em;
 	background-repeat : no-repeat;
-	background-size : 1em auto;
+	background-size : 1.2em auto;
 	background-position : 50% 50%;
-	font-size : 1em;
+	font-size : 1.2em;
 	font-family : "icomoon" !important;
 	text-align : center;
-	line-height : 2.5em;
+	line-height : 2.1em;
 	}
 	
 aside > ul > li > a > span.icon.salt::after,
