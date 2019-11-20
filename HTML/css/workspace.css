@@ -193,7 +193,7 @@ div.container > div.workspace > div > div.box > div.baron > div.baron__scroller 
 	}
 	
 div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller {
-	min-width : 14em !important;
+	min-width : 13.5em !important;
 	}
 	
 div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller::before, 

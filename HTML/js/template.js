@@ -66,7 +66,7 @@ $(document).ready(function() {
 		if (!aside.hasClass("min") && aside.hasClass("max")) {
 			aside.removeClass("max").addClass("min");
 			aside.animate({
-  				width: 0
+  				width: "2.5em"
 				}, 250, function() {
 				baron__aside.update();
 				baron__article.update();

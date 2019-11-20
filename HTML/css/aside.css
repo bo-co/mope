@@ -4,12 +4,12 @@ aside,
 div.container > div.workspace > div.aside > div.box > div.phone,
 div.container > div.workspace > div.aside > div.box > div.header {
 	width : 100%;
-	min-width : 14em;
+	min-width : 13.5em;
 	padding : 0.5rem 0;
 	}
 	
 div.container > div.workspace > div.aside > div.box > div.header > a.logo {
-	width : 9em;
+	width : 8.5em;
 	margin : 0 auto;
 	}
 	
@@ -31,7 +31,7 @@ div.container > div.workspace > div.aside > div.box > div.phone {
 	
 div.container > div.workspace > div.aside > div.box > div.phone > a {
 	position : relative;
-	width : 9em;
+	width : 8.5em;
 	height : 2.5em;
 	margin : 0.5rem auto 0 auto;
 	text-decoration : none;
@@ -98,7 +98,7 @@ aside > ul > li > ul > li > a,
 aside > ul > li > div,
 aside > ul > li > ul > li > div {
 	position : inherit;
-	width : calc(9em + (100% - 9em)/2 + 2.5em);
+	width : calc(8.5em + (100% - 8.5em)/2 + 2.5em);
 	padding-left : 2.5em;
 	padding-right : 2.5em;
 	}
@@ -143,7 +143,7 @@ aside > ul > li > ul > li > div > strong,
 aside > ul > li > div > p {
 	position : inherit;
 	display : block;
-	max-width : 9em;
+	max-width : 8.5em;
 	margin : 0 0 0 auto;
 	}
 
@@ -188,7 +188,7 @@ aside > ul > li > a + span,
 aside > ul > li > div + span {
 	position : absolute;
     top : 0;
-    left : calc(9em + (100% - 9em)/2);
+    left : calc(8.5em + (100% - 8.5em)/2);
     z-index : 10;
     width : 2.5em;
     height : 2.5em;
