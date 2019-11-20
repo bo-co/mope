@@ -26,9 +26,9 @@ function resize() {
 		loadCSS("css/vh.css?" + $.now(), "stylesheet");
 		vhCSS = true;
 		}
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
 	setTimeout(function() {
-		let vh = window.innerHeight * 0.01;
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
 		baron__aside.update();
 		baron__article.update();
 		}, 50);
