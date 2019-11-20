@@ -6,7 +6,6 @@ div.container > div.workspace > div.aside > div.box > div.header {
 	width : 100%;
 	min-width : 14em;
 	padding : 0.5rem 0;
-	background-color : rgba(252, 252, 252, 1);
 	}
 	
 div.container > div.workspace > div.aside > div.box > div.header > a.logo {

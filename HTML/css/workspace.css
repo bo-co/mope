@@ -15,6 +15,7 @@ div.container > div.workspace > div {
 
 div.container > div.workspace > div.aside {	
 	z-index : 10;
+	background-color : rgba(252, 252, 252, 1);
 	box-shadow : 0 1px 5px 0 rgba(0, 0, 0, 0.05);
 	}
 	
@@ -273,10 +274,6 @@ div.container > div.workspace > div > div.box > div.baron > div.baron__scroller 
 	flex : 1;
 	}
 	
-div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller > ul > li:first-child {
-	background-color : rgba(252, 252, 252, 1);
-	}
-	
 div.container > div.workspace > div.article > div.box > div.baron > div.baron__scroller > ul > li {
 	font-size : 0.8em;
 	line-height : 1.4em;
@@ -292,6 +289,10 @@ div.container > div.workspace > div.article > div.box > div.baron > div.baron__s
 		max-width : 30%;
 		}
 		
+	div.container > div.workspace > div.aside > div.box > div.baron {
+		height : calc(100% - 7em - 2.5rem);
+		}
+		
 	div.container > div.workspace > div.article > div.box > div.baron > div.baron__scroller {
     	min-width : calc(1200px - 2.5em - 30%) !important;
 		}
@@ -305,6 +306,10 @@ div.container > div.workspace > div.article > div.box > div.baron > div.baron__s
 	div.container > div.workspace > div.aside {
 		width : 30%;
 		max-width : 30%;
+		}
+		
+	div.container > div.workspace > div.aside > div.box > div.baron {
+		height : calc(100% - 7em - 2.5rem);
 		}
 		
 	div.container > div.workspace > div.article > div.box > div.baron > div.baron__scroller {
@@ -323,6 +328,10 @@ div.container > div.workspace > div.article > div.box > div.baron > div.baron__s
 		max-width : 100%;
 		}
 		
+	div.container > div.workspace > div.aside > div.box > div.baron {
+		height : calc(100% - 2.5em - 1.5rem);
+		}
+		
 	div.container > div.workspace > div.article > div.box > div.baron > div.baron__scroller {
     	min-width : 720px !important;
 		}
@@ -339,6 +348,10 @@ div.container > div.workspace > div.article > div.box > div.baron > div.baron__s
 		max-width : 100%;
 		}
 		
+	div.container > div.workspace > div.aside > div.box > div.baron {
+		height : calc(100% - 2.5em - 1.5rem);
+		}
+		
 	div.container > div.workspace > div.article > div.box > div.baron > div.baron__scroller {
     	min-width : 480px !important;
 		}
@@ -353,6 +366,10 @@ div.container > div.workspace > div.article > div.box > div.baron > div.baron__s
 	div.container > div.workspace > div.aside {
 		width : 0;
 		max-width : 100%;
+		}
+		
+	div.container > div.workspace > div.aside > div.box > div.baron {
+		height : calc(100% - 2.5em - 1.5rem);
 		}
 		
 	div.container > div.workspace > div.article > div.box > div.baron > div.baron__scroller {
