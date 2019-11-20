@@ -63,7 +63,7 @@ div.container > div.workspace > div.aside > div.box > div.phone > a > span {
 div.container > div.workspace > div.aside > div.box > div.phone > a::before {
 	position : absolute;
 	top : calc(50% - 1.25em);
-	left : calc(50% - 4.5em);
+	left : calc(50% - 4.25em);
 	z-index : 1;
 	width : 100%;
 	height : 100%;
