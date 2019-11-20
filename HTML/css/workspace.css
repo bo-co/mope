@@ -33,6 +33,7 @@ div.container > div.workspace > div.aside::after {
 div.container > div.workspace > div.article {
 	flex : 1;
 	max-width : 100%;
+	background-color : rgba(255, 255, 255, 1);
 	}
 	
 div.container > div.workspace > div > div.box {
