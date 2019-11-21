@@ -91,7 +91,7 @@ div.container > div.workspace > div.aside > div.ui-resizable-handle > ul {
 	
 div.container > div.workspace > div.aside > div.ui-resizable-handle > ul::after {
 	z-index : 1;
-	background-color : rgba(105, 155, 245, 1);
+	background-color : rgba(105, 155, 245, 0.75);
 	}
 
 div.container > div.workspace > div.aside > div.ui-resizable-handle > ul::after,
@@ -109,7 +109,7 @@ div.container > div.workspace > div.aside > div.ui-resizable-handle > ul::before
 	
 div.container > div.workspace > div.aside > div.ui-resizable-handle > ul::before {
 	z-index : 2;	
-	background-color : rgba(50, 90, 150, 1);
+	background-color : rgba(50, 90, 150, 0.5);
 	transform : scale(0);
 	opacity : 0;	
 	}
