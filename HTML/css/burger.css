@@ -20,7 +20,7 @@ ul.burger > li {
 	z-index : inherit;
 	width : 1.5em;
 	height : 2px;
-	background-color : rgba(0, 0, 0, 1);
+	background-color : rgba(60, 66, 73, 1);
 	transition : width 0.25s ease;
   	animation-timing-function : ease;
   	animation-duration : .25s;

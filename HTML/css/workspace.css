@@ -21,7 +21,7 @@ div.container > div.workspace > div.aside {
 	
 div.container > div.workspace > div.aside::after {
 	position : absolute;
-	right : 0;
+	left : 100%;
 	bottom : 0;
 	z-index : 10;
 	height : 100%;
@@ -239,7 +239,7 @@ div.container > div.workspace > div > div.box > div.baron > div.baron__track > d
     position : absolute;
     right : 0;    
     z-index : 1;
-    width : 0.1em;
+    width : 2px;
 	}
 	
 div.container > div.workspace > div > div.box > div.baron._scrollbar > div.baron__track > div.baron__bar {
@@ -285,7 +285,7 @@ div.container > div.workspace > div.article > div.box > div.baron > div.baron__s
 		}
 		
 	div.container > div.workspace > div.aside > div.box > div.baron {
-		height : calc(100% - 7em - 2.5rem);
+		max-height : calc(100% - 7em - 2.5rem);
 		}
 		
 	div.container > div.workspace > div.article > div.box > div.baron > div.baron__scroller {
@@ -304,7 +304,7 @@ div.container > div.workspace > div.article > div.box > div.baron > div.baron__s
 		}
 		
 	div.container > div.workspace > div.aside > div.box > div.baron {
-		height : calc(100% - 7em - 2.5rem);
+		max-height : calc(100% - 7em - 2.5rem);
 		}
 		
 	div.container > div.workspace > div.article > div.box > div.baron > div.baron__scroller {
@@ -324,7 +324,7 @@ div.container > div.workspace > div.article > div.box > div.baron > div.baron__s
 		}
 		
 	div.container > div.workspace > div.aside > div.box > div.baron {
-		height : calc(100% - 2.5em - 1.5rem);
+		max-height : calc(100% - 2.5em - 1.5rem);
 		}
 		
 	div.container > div.workspace > div.article > div.box > div.baron > div.baron__scroller {
@@ -344,7 +344,7 @@ div.container > div.workspace > div.article > div.box > div.baron > div.baron__s
 		}
 		
 	div.container > div.workspace > div.aside > div.box > div.baron {
-		height : calc(100% - 2.5em - 1.5rem);
+		max-height : calc(100% - 2.5em - 1.5rem);
 		}
 		
 	div.container > div.workspace > div.article > div.box > div.baron > div.baron__scroller {
@@ -364,7 +364,7 @@ div.container > div.workspace > div.article > div.box > div.baron > div.baron__s
 		}
 		
 	div.container > div.workspace > div.aside > div.box > div.baron {
-		height : calc(100% - 2.5em - 1.5rem);
+		max-height : calc(100% - 2.5em - 1.5rem);
 		}
 		
 	div.container > div.workspace > div.article > div.box > div.baron > div.baron__scroller {
