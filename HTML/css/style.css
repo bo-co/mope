@@ -77,6 +77,10 @@ div.container.opened > span {
 	html {
 		font-size : 60px;
 		}
+		
+	body {
+		font-size : 20px;
+		}
 	}
 
 /* 50px — базовый отступ 
@@ -85,6 +89,10 @@ div.container.opened > span {
 @media (min-width : 961px) and (max-width : 1200px) {
 	html {
 		font-size : 50px;
+		}
+		
+	body {
+		font-size : 19.5px;
 		}
 	}
 
@@ -95,6 +103,10 @@ div.container.opened > span {
 	html {
 		font-size : 40px;
 		}
+
+	body {
+		font-size : 19px;
+		}
 	}
 	
 /* 30px — базовый отступ 
@@ -104,6 +116,10 @@ div.container.opened > span {
 	html {
 		font-size : 30px;
 		}
+
+	body {
+		font-size : 18.5px;
+		}
 	}
 
 /* 20px — базовый отступ 
@@ -112,5 +128,9 @@ div.container.opened > span {
 @media (max-width : 480px) {
 	html {
 		font-size : 20px;
-		}	
+		}
+		
+	body {
+		font-size : 18px;
+		}
 	}

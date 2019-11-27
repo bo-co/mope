@@ -289,7 +289,7 @@ div.container > div.workspace > div.article > div.box > div.baron > div.baron__s
 		}
 		
 	div.container > div.workspace > div.article > div.box > div.baron > div.baron__scroller {
-    	min-width : calc(1200px - 2.5em - 30%) !important;
+    	min-width : calc((1200px - 2.5em) - (1200px - 2.5em)*0.3) !important;
 		}
 	}
 	
@@ -308,7 +308,7 @@ div.container > div.workspace > div.article > div.box > div.baron > div.baron__s
 		}
 		
 	div.container > div.workspace > div.article > div.box > div.baron > div.baron__scroller {
-    	min-width : calc(960px - 2.5em - 30%) !important;
+    	min-width : calc((960px - 2.5em) - (960px - 2.5em)*0.3) !important;
 		}
 	}
 
