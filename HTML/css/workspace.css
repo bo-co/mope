@@ -269,9 +269,9 @@ div.container > div.workspace > div > div.box > div.baron > div.baron__scroller 
 	flex : 1;
 	}
 	
-div.container > div.workspace > div.article > div.box > div.baron > div.baron__scroller > ul > li {
+div.container > div.workspace > div.article > div.box > div.baron > div.baron__scroller > ul > li:first-child {
 	font-size : 0.8em;
-	line-height : 1.4em;
+	line-height : 1.375em;
 	}
 	
 @media (min-width : 1201px) {
