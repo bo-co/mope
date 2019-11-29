@@ -2,7 +2,7 @@
 
 footer {
 	background-color: rgba(60, 66, 73, 1);
-	padding : 0 1rem 0.5rem 1rem;
+	padding : 0 1rem;
 	}
 	
 footer > div {
@@ -13,15 +13,14 @@ footer > div {
 	}
 	
 footer > div.copyright {
-	padding-top : 0.5rem;
+	padding : 0.5rem 0;
 	}
 
 footer,
 footer > div > ul > li > a.phone,
 footer > div > ul > li > a.mail::before,
 footer > div > ul > li > a.mail > span::before,
-footer > div > ul > li > ul > li > a > span,
-ol.social > li > a {
+footer > div > ul > li > ul > li > a > span {
 	color : rgba(255, 255, 255, 1);
 	}
 	
@@ -115,19 +114,22 @@ footer > div > ul > li > a.logo > span {
 	
 footer > div > ul > li > a.phone {
 	font-weight : 600;
+	font-family : "RobotoSlab", Arial, Tahoma, Verdana, sans-serif;
 	white-space : nowrap;
+	overflow : hidden;
 	}
 	
 footer > div > ul > li > a.phone::before {
 	display : block;
 	font-weight : 300;
+	font-family : "Roboto", Arial, Tahoma, Verdana, sans-serif;
 	content : "Бесплатная консультация";
 	white-space : nowrap;
 	}
 	
 footer > div > ul > li > a.phone > span {
-	font-size : 0.96em;
-	transition : color .25s ease;	
+	font-size : 1em;
+	transition : color .3s ease;	
 	}
 
 footer > div.copyright,
@@ -155,8 +157,10 @@ footer > div > ul > li > a.mail::before {
 	
 ol.social {
 	display : flex;
+	flex-wrap : wrap;
+	justify-content : space-between;
 	width : 8.5em;
-	padding : 0;
+	padding : 0 0 0.5em 0;
 	margin : 0 auto;
 	list-style : none;
 	}
@@ -168,7 +172,7 @@ ol.social > li > a {
 	}
 	
 ol.social > li {
-	margin-bottom : 0.5rem;
+	margin-bottom : 0.5em;
 	}
 	
 ol.social > li:not(:last-child) {
@@ -177,39 +181,38 @@ ol.social > li:not(:last-child) {
 	
 ol.social > li > a {
 	position : relative;
-	border : solid 2px rgba(255, 255, 255, 1);
+	border : solid 2px rgba(144, 152, 162, 1);
+	color : rgba(144, 152, 162, 1);
 	border-radius : 50%;
-	transition : all .25s ease;
+	transition : all .3s ease;
 	}
 	
 ol.social > li > a:hover {
 	border : solid 2px rgba(105, 155, 245, 1);
 	}
-
-ol.social > li > a::before {
+	
+ol.social > li > a::after {
 	position : absolute;
-	left : 0;
-	top : calc(50% - 1.25em);
-	z-index : 1;
-	width : 100%;
-	font-size : 1.2em;
+	top : 50%;
+    left : 50%;
+	z-index : 2;
 	font-family : "icomoon" !important;
-	text-align : center;
-	line-height : 2.5em;
+	font-size : 1.25em;
+	transform : translate(-50%, -50%);
 	}
 	
-ol.social > li > a.instagram::before {
-	content : "\e903";
+ol.social > li > a.instagram::after {
+	content : "\e90b";
 	}
 	
-ol.social > li > a.facebook::before {
-	content : "\e904";
+ol.social > li > a.facebook::after {
+	content : "\e908";
 	}
 	
-ol.social > li > a.vk::before {
-	content : "\e905";
+ol.social > li > a.vk::after {
+	content : "\e90e";
 	}
-	
+
 footer > div > ul > li > ul > li > a {
 	display : inline-block;
 	}
@@ -327,17 +330,6 @@ footer > div > ul > li > ul > li > ol > li > a > span {
 		display : none;
 		}
 		
-	/* footer > div > ul > li:last-child::before {
-		position : absolute;
-		top : 0;
-		left : 0;
-		z-index : 1;
-		width : 100%;
-		height : 1px;
-		content : "";
-		background-color : rgba(94, 99, 106, 1);
-		} */
-		
 	footer > div > ul > li > ul > li {
 		width : 50%;
 		min-width : 7em;
@@ -356,17 +348,6 @@ footer > div > ul > li > ul > li > ol > li > a > span {
 	footer > div > ul > li:first-child {
 		display : none;
 		}
-		
-	/* footer > div > ul > li:last-child::before {
-		position : absolute;
-		top : 0;
-		left : 0;
-		z-index : 1;
-		width : 100%;
-		height : 1px;
-		content : "";
-		background-color : rgba(94, 99, 106, 1);
-		} */
 		
 	footer > div > ul > li > ul > li {
 		width : 100%;

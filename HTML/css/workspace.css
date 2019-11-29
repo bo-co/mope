@@ -21,7 +21,7 @@ div.container > div.workspace > div.aside {
 	
 div.container > div.workspace > div.aside::after {
 	position : absolute;
-	left : 100%;
+	left : calc(100% - 1px);
 	bottom : 0;
 	z-index : 10;
 	height : 100%;
@@ -227,7 +227,7 @@ div.container > div.workspace > div > div.box > div.baron > div.baron__track {
     top : 0;
     right : 2.5em;
     bottom : 0;
-    z-index : 10;
+    z-index : 20;
 	}
 	
 div.container > div.workspace > div > div.box > div.baron._scrollbar > div.baron__track {

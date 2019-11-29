@@ -81,7 +81,7 @@ div.container > div.workspace > div.aside > div.box > div.phone > a::before {
 	content : "";
 	transform : scale(0);
 	opacity : 0;
-	transition : all .25s ease;
+	transition : all .3s ease;
 	}
 	
 div.container > div.workspace > div.aside > div.box > div.phone > a:hover::before {
@@ -144,8 +144,8 @@ aside > ul > li > a,
 aside > ul > li > ul > li > a {
 	display : block;
 	text-decoration : none;
-	color : rgba(180, 180, 180, 1);
-	transition : color .25s ease;	
+	color : rgba(60, 66, 73, 0.5);
+	transition : color .3s ease;	
 	}
 	
 aside > ul > li > a > span,
@@ -188,13 +188,11 @@ aside > ul > li > div > span.icon::after {
 	
 aside > ul > li > a > span.icon.salt::after,
 aside > ul > li > div > span.icon.salt::after {
-	/* background-image : url("../img/salt.svg?141120191231"); */
 	content : "\e900";
 	}
 	
 aside > ul > li > a > span.icon.lamp::after,
 aside > ul > li > div > span.icon.lamp::after {
-	/* background-image : url("../img/lamp.svg?141120191231"); */
 	content : "\e901";
 	}
 	
@@ -219,8 +217,8 @@ aside > ul > li > div + span::after {
     width : 0.5em;
     height : 2px;
     content : "";
-    background-color : rgba(180, 180, 180, 1);
-    transition : all .25s ease;
+    background-color : rgba(60, 66, 73, 0.5);
+    transition : all .3s ease;
 	}
 	
 aside > ul > li > a + span:hover::before,
