@@ -86,7 +86,7 @@ div.container > div.workspace > div.aside > div.ui-resizable-handle > ul {
 	overflow : hidden;
 	background-color : rgba(255, 255, 255, 1);
 	box-shadow : 0 1px 5px 0 rgba(0, 0, 0, 0.05);
-	transition : all .25s ease;
+	transition : all .3s ease;
 	}
 	
 div.container > div.workspace > div.aside > div.ui-resizable-handle > ul::after {
@@ -104,7 +104,7 @@ div.container > div.workspace > div.aside > div.ui-resizable-handle > ul::before
 	height : 100%;
 	border-radius : 1.25em;
 	content : "";
-	transition : all .25s ease;
+	transition : all .3s ease;
 	}
 	
 div.container > div.workspace > div.aside > div.ui-resizable-handle > ul::before {
@@ -133,11 +133,10 @@ div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li::a
     left : calc(50% - 1px);
     z-index : 10;
     width : 2px;
-    height : 0.5em;
+    height : 10px;
     content : "";
-    /* background-color : rgba(105, 155, 245, 1); */
     background-color : rgba(255, 255, 255, 1);
-    transition : all .25s ease;
+    transition : all .3s ease;
     }
     
 div.container > div.workspace > div.aside > div.ui-resizable-handle > ul > li::before {

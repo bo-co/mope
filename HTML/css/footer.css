@@ -74,12 +74,18 @@ footer > div > ul > li > ul {
 	padding : 0;
 	}
 	
+footer > div > ul > li,
+footer > div > ul > li > ul > li,
+footer > div > ul > li > ul > li > ol > li {
+	line-height : 0;
+	}
+	
 footer > div > ul > li {
 	position : relative;
 	padding-top : 1rem;
 	padding-bottom : 0.5rem;
 	}
-	
+
 footer > div > ul > li > a.logo,
 footer > div > ul > li > a.logo > span,
 footer > div > ul > li > a.phone,
@@ -94,12 +100,11 @@ footer > div > ul > li > a.logo,
 footer > div > ul > li > a.phone,
 footer > div > ul > li > a.mail {
 	width : 8.5em;
-	margin : 0 auto;
-	padding : 0 0 1em 0;
+	margin : 0 auto 1em auto;
 	}
 	
 footer > div > ul > li > a.logo {
-	height : 3em;
+	height : 1.9em;
 	}
 	
 footer > div > ul > li > a.logo > span {
@@ -113,6 +118,8 @@ footer > div > ul > li > a.logo > span {
 	}
 	
 footer > div > ul > li > a.phone {
+	font-size : 1em;
+	line-height : 1.3em;
 	font-weight : 600;
 	font-family : "RobotoSlab", Arial, Tahoma, Verdana, sans-serif;
 	white-space : nowrap;
@@ -123,20 +130,19 @@ footer > div > ul > li > a.phone::before {
 	display : block;
 	font-weight : 300;
 	font-family : "Roboto", Arial, Tahoma, Verdana, sans-serif;
-	content : "Бесплатная консультация";
 	white-space : nowrap;
+	content : "Бесплатная консультация";
 	}
 	
 footer > div > ul > li > a.phone > span {
-	font-size : 1em;
 	transition : color .3s ease;	
 	}
 
 footer > div.copyright,
-footer > div > ul > li > a.phone::before,	
+footer > div > ul > li > a.phone::before,
 footer > div > ul > li > a.mail > span {
 	font-size : 0.7em;
-	line-height : 1.45em;	
+	line-height : 1.4em;	
 	}
 	
 footer > div > ul > li > a.mail {
@@ -150,6 +156,7 @@ footer > div > ul > li > a.mail::before {
 	top : 0;
 	z-index : 1;
 	font-size : 1em;
+	line-height : 1em;
 	font-family : "icomoon" !important;
 	text-align : center;
 	content : "\e902";
@@ -160,7 +167,7 @@ ol.social {
 	flex-wrap : wrap;
 	justify-content : space-between;
 	width : 8.5em;
-	padding : 0 0 0.5em 0;
+	padding : 0;
 	margin : 0 auto;
 	list-style : none;
 	}
@@ -194,11 +201,13 @@ ol.social > li > a:hover {
 ol.social > li > a::after {
 	position : absolute;
 	top : 50%;
-    left : 50%;
+    left : 0;
 	z-index : 2;
+	width : 100%;
 	font-family : "icomoon" !important;
 	font-size : 1.25em;
-	transform : translate(-50%, -50%);
+	text-align : center;
+	transform : translate(0, -50%);
 	}
 	
 ol.social > li > a.instagram::after {
@@ -212,12 +221,22 @@ ol.social > li > a.facebook::after {
 ol.social > li > a.vk::after {
 	content : "\e90e";
 	}
+	
+footer > div.copyright > span::after {
+	content : " — курорт для вашего тела";
+	}
 
-footer > div > ul > li > ul > li > a {
+footer > div.copyright > span,
+footer > div.copyright > a,
+footer > div.copyright > a > span,
+footer > div > ul > li > ul > li > a,
+footer > div > ul > li > ul > li > a > span,
+footer > div > ul > li > ul > li > ol > li > a,
+footer > div > ul > li > ul > li > ol > li > a > span {
 	display : inline-block;
 	}
 	
-footer > div > ul > li > ul > li > a > span {
+footer > div > ul > li > ul > li > a {
 	font-weight : 500;
 	font-size : 0.8em;
 	line-height : 1.375em;
@@ -225,16 +244,48 @@ footer > div > ul > li > ul > li > a > span {
 
 footer > div > ul > li > ul > li > a,	
 footer > div > ul > li > ul > li > ol {
-	padding : 0 0 0.7em 0;
+	padding : 0.5em 0;
 	}
 	
 footer > div > ul > li > ul > li > ol > li {
 	width : 100%;
 	}
 	
-footer > div > ul > li > ul > li > ol > li > a > span {
+footer > div > ul > li > ul > li > ol > li > a {
 	font-size : 0.7em;
-	line-height : 2em;
+	line-height : 1.4em;
+	padding : 0.25em 0;
+	}
+	
+footer > div.copyright > a.developer {
+	z-index : 10;
+	display : block;
+	z-index : 10;
+	width : 11.2em;
+	height : 3.1em;
+	background-image : url("../img/developer.svg?301120190201");
+	background-position : 100% 50%; 
+	background-repeat : no-repeat;
+	background-size : contain;
+	font-size : 0.9em;
+	line-height : 0.9em;
+	}	
+
+footer > div.copyright > a.developer::after {
+	display : block;
+	position : absolute;
+	top : calc(100% - 0.75em);
+	right : 0;
+	z-index : 10;
+	font-family : Arial, Tahoma, Verdana, sans-serif;
+	content : "разработка сайта";
+	white-space : nowrap;
+	transition : all 0.3s ease;
+	color : rgba(144, 152, 162, 1);
+	}
+
+footer > div.copyright > a.developer:hover::after { 
+	color : rgba(255, 255, 255, 1);
 	}
 
 @media (min-width : 1201px) {
@@ -262,6 +313,12 @@ footer > div > ul > li > ul > li > ol > li > a > span {
 		width : 50%;
 		min-width : 7em;
 		padding-right : 1rem;
+		}
+		
+	footer > div.copyright > a.developer {
+		position : absolute;
+		right : 0;
+		top : calc(50% - 1.55em);
 		}
 	}
 		
@@ -291,6 +348,12 @@ footer > div > ul > li > ul > li > ol > li > a > span {
 		min-width : 7em;
 		padding-right : 1rem;
 		}
+		
+	footer > div.copyright > a.developer {
+		position : absolute;
+		right : 0;
+		top : calc(50% - 1.55em);
+		}
 	}
 
 @media (min-width : 721px) and (max-width : 960px) {
@@ -319,6 +382,12 @@ footer > div > ul > li > ul > li > ol > li > a > span {
 		min-width : 7em;
 		padding-right : 1rem;
 		}
+		
+	footer > div.copyright > a.developer {
+		position : absolute;
+		right : 0;
+		top : calc(50% - 1.55em);
+		}
 	}
 
 @media (min-width : 481px) and (max-width : 720px) {
@@ -338,6 +407,16 @@ footer > div > ul > li > ul > li > ol > li > a > span {
 	footer > div > ul > li > ul > li:first-child {
 		padding-right : 1rem;
 		}
+		
+	footer > div.copyright > span::after {
+		display : none;
+		}
+		
+	footer > div.copyright > a.developer {
+		position : absolute;
+		right : 0;
+		top : calc(50% - 1.55em);
+		}
 	}
 
 @media (max-width : 480px) {
@@ -351,5 +430,14 @@ footer > div > ul > li > ul > li > ol > li > a > span {
 		
 	footer > div > ul > li > ul > li {
 		width : 100%;
+		}
+		
+	footer > div.copyright > span::after {
+		display : none;
+		}
+		
+	footer > div.copyright > a.developer {
+		position : relative;
+		margin : 0.5rem 0;
 		}
 	}
