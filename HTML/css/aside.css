@@ -144,15 +144,8 @@ aside > ul > li > a,
 aside > ul > li > ul > li > a {
 	display : block;
 	text-decoration : none;
-	transition : color .3s ease;	
-	}
-
-aside > ul > li > a {
-	color : rgba(60, 66, 73, 0.75);
-	}	
-	
-aside > ul > li > ul > li > a {
 	color : rgba(60, 66, 73, 0.5);
+	transition : color .3s ease;	
 	}
 	
 aside > ul > li > a > span,
