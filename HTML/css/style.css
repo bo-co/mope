@@ -17,10 +17,12 @@ strong {
 	font-weight : 600;
 	}
 	
-.header {
-	font-family : "RobotoSlab", Arial, Tahoma, Verdana, sans-serif;	
+.accent {
+	font-family : "RobotoSlab", Arial, Tahoma, Verdana, sans-serif;
+	font-weight : 600;
 	}
 
+a,
 .color-hover:hover,
 .color-before::before,
 .color-before::after {
@@ -32,6 +34,15 @@ strong {
 .bg-color-after::after,
 .baron__bar {
 	background-color : rgba(105, 155, 245, 1);
+	}
+	
+a {
+	text-decoration : none;
+	transition : color .3s ease;
+	}
+	
+a:hover {
+	color : rgba(50, 90, 150, 1);
 	}
 	
 div.container {

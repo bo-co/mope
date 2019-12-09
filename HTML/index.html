@@ -18,6 +18,8 @@
     	<link rel="stylesheet" href="css/aside.css?261120191454" />
     	<link rel="stylesheet" href="css/article.css?261120191454" />
     	<link rel="stylesheet" href="css/footer.css?261120191454" />
+    	<link rel="stylesheet" href="css/form.css?261120191454" />
+    	
     	<link rel="stylesheet" href="css/nav.css?261120191454" />
     	<script defer src="js/jquery.js?261120191454"></script>
     	<script defer src="js/jquery.throttle-debounce.js?261120191454"></script>
@@ -26,6 +28,7 @@
     	<!-- убрать комментирование выше, если нужен resizable -->
     	<script defer src="js/jquery.baron.js?261120191454"></script>
     	<script defer src="js/template.js?261120191454"></script>
+    	<script defer src="js/form.js?261120191454"></script>
 		<title>HTTP 404 — не удается найти веб-страницу или документ</title>
 	</head>
 	<body onresize="resize();" onload="resize();">
@@ -70,13 +73,13 @@
 									<li>
 										<aside>
 											<ul>
-												<li>
+												<!--li>
 													<div>
 														<strong>
 															<span>Каталог товаров</span>
 														</strong>
 													</div>
-												</li>
+												</li-->
 												<li class="more">
 													<a class="color-hover" href="/catalog/salt/" title="Соль для ванны">
 														<span class="icon salt">
@@ -175,7 +178,67 @@
                 					</li>
 									<li>
 										<footer>
-											<div>
+											<div class="form feedback ">
+												<div>
+													<span class="accent">Оставьте комментарий</span>
+													<span class="accent">Спасибо!</span>
+													<blockquote>В комментариях запрещено использовать материалы рекламного характера и (или) использовать нецензурную лексику (мат), включая завуалированную.</blockquote>
+													<blockquote>Ваше сообщение успешно отправлено. В ближайшее время с Вами свяжется наш специалист и ответит на все, интересующие Вас, вопросы.</blockquote>
+												</div>
+												<form name="application" method="post" action="#">
+													<ul>
+														<li>
+															<div>
+																<span class="accent">Свяжитесь с нами</span>
+															</div>
+														</li>
+														<li>
+															<div>
+																<input class="field" type="text" name="utheme" value="" data-form="feedback" />
+																<span>Чем мы можем быть полезны?</span>
+															</div>
+														</li>
+													</ul>
+													<ul>
+														<li>
+															<div class="required">
+																<input class="field" type="text" name="uname" value="" data-form="feedback" />
+																<span>Ваше имя</span>
+															</div>
+														</li>
+														<li>
+															<div class="required">
+																<input class="field" type="text" name="uemail" value="" data-form="feedback" />
+																<span>Ваш E-mail</span>
+															</div>
+														</li>
+													</ul>
+													<ul>
+														<li>
+															<div>
+																<textarea class="field" name="umessage" data-form="feedback"></textarea>
+																<span>Напишите комментарий</span>
+															</div>
+														</li>
+													</ul>
+													<ol>
+														<li>
+															<div class="required consent">
+																<input type="checkbox" name="consent" value="Y" />
+																<span class="checkbox" data-form="feedback"></span>
+																<span>Даю согласие на обработку</span>
+																<a href="/policy/" title="персональные данные">персональных данных</a>
+															</div>
+														</li>
+														<li>
+															<div>
+																<button type="button" data-form="feedback"></button>
+															</div>
+														</li>
+													</ol>
+												</form>
+											</div>
+											<div class="footer">
 												<ul>
 													<li>
 														<ul>
@@ -267,7 +330,7 @@
 													</li>
 												</ul>
 											</div>
-											<div class="copyright">
+											<div class="footer copyright">
 												<span>© 2019 «Море здоровья»</span><br />
 												<a class="policy" href="/policy/" title="Политика конфиденциальности">
 													<span>Политика конфиденциальности</span>
