@@ -1,42 +1,160 @@
 @charset "UTF-8";
 
-div.container > nav {
-	position : absolute;
-	top : 0;
-	right : calc(50px - 100%);
-	z-index : 100;
-	width : calc(100% - 50px);
-	height : 100%;
-	background-color: rgba(80, 80, 80, 1);
-	overflow : hidden;
-	}
-	
-@media (min-width : 1201px) {
-	div.container > nav {
-		max-width : calc((100% - 50px)*0.7);
-		}
-	}
-	
-@media (min-width : 961px) and (max-width : 1200px) {
-	div.container > nav {
-		max-width : calc((100% - 50px)*0.65);
-		}
-	}
+nav {
+  width: 100%;
+  padding: 1em 0;
+  background-color: inherit;
+}
 
-@media (min-width : 721px) and (max-width : 960px) {
-	div.container > nav {
-		max-width : calc((100% - 50px)*0.6);
-		}
-	}
-		
-@media (min-width : 481px) and (max-width : 720px) {
-	div.container > nav {
-		max-width : 100%;
-		}	
-	}
-	
-@media (max-width : 480px) {
-	div.container > nav {
-		max-width : 100%;
-		}
-	}
+nav > ul,
+nav > ul > li > ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav > ul > li,
+nav > ul > li > ul > li {
+  position: relative;
+}
+
+nav > ul > li > a,
+nav > ul > li > ul > li > a,
+nav > ul > li > div,
+nav > ul > li > ul > li > div {
+  position: inherit;
+  width: 100%;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+}
+
+nav > ul > li > a,
+nav > ul > li > ul > li > a,
+nav > ul > li > a > span > span,
+nav > ul > li > div > span > span,
+nav > ul > li > ul > li > a > span > span,
+nav > ul > li > ul > li > div > span > span {
+  display: block;
+}
+
+nav > ul > li > a > span > span,
+nav > ul > li > div > span > span {
+  font-weight: 500;
+}
+
+nav > ul > li > a > span > span,
+nav > ul > li > div > span > span {
+  -webkit-transform: scale(.9);
+  transform: scale(.9);
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+
+nav > ul > li > ul > li > a > span > span,
+nav > ul > li > ul > li > div > span > span {
+  -webkit-transform: scale(.8);
+  transform: scale(.8);
+}
+
+nav > ul > li > a,
+nav > ul > li > ul > li > a {
+  color: inherit;
+}
+
+nav > ul > li > a > span,
+nav > ul > li > ul > li > a > span,
+nav > ul > li > div > span,
+nav > ul > li > ul > li > div > span {
+  position: inherit;
+  display: block;
+  margin: 0 0 0 auto;
+}
+
+nav > ul > li > a > span,
+nav > ul > li > div > span {
+  padding-top: .55em;
+  padding-bottom: .55em;
+}
+
+nav > ul > li > a > span.icon::after,
+nav > ul > li > div > span.icon::after {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  z-index: 1;
+  width: 2.5em;
+  height: 2.5em;
+  background-repeat: no-repeat;
+  background-size: 1em auto;
+  background-position: 50% 50%;
+  font-family: "icomoon" !important;
+  text-align: center;
+  line-height: 2.5;
+}
+
+nav > ul > li > a + span,
+nav > ul > li > div + span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 2.5em;
+  height: 2.5em;
+  cursor: pointer;
+}
+
+nav > ul > li > a + span::before,
+nav > ul > li > a + span::after,
+nav > ul > li > div + span::before,
+nav > ul > li > div + span::after {
+  position: absolute;
+  top: calc(50% - 1px);
+  z-index: 10;
+  width: 10px;
+  height: 2px;
+  content: "";
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+nav > ul > li > a + span::before,
+nav > ul > li > div + span::before {
+  right: calc(50% - 1px);
+}
+
+nav > ul > li > a + span::after,
+nav > ul > li > div + span::after {
+  left: calc(50% - 2px);
+}
+
+nav > ul > li > a + span::after,
+nav > ul > li.selected > a + span::before,
+nav > ul > li > div + span::after,
+nav > ul > li.selected > div + span::before {
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+}
+
+nav > ul > li > a + span::before,
+nav > ul > li.selected > a + span::after,
+nav > ul > li > div + span::before,
+nav > ul > li.selected > div + span::after {
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+nav > ul > li > ul {
+  height: 0;
+  overflow: hidden;
+}
+
+nav > ul > li.selected > ul {
+  height: 100%;
+}
+
+nav > ul > li > ul > li > a > span,
+nav > ul > li > ul > li > div > span {
+  padding-top: .25em;
+  padding-bottom: .25em;
+}

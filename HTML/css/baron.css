@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+div.baron {
+  position: relative;
+  width: calc(100% + 2.5em);
+  height: 100%;
+}
+
+div.baron > div.baron-scroller {
+  width: 100% !important;
+  min-width: calc(16em + 2.5em) !important;
+  max-width: 100% !important;
+  padding: 0 2.5em 0 0 !important;
+  margin: 0 !important;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  /* remove line to customize scrollbar in iOs */
+}
+
+div.baron > div.baron-scroller::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+div.baron > div.baron-track {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 2.5em;
+  bottom: 0;
+  z-index: 20;
+}
+
+div.baron._scrollbar > div.baron-track {
+  display: block;
+}
+
+div.baron > div.baron-track > div.baron-bar {
+  display: none;
+  position: absolute;
+  right: 2px;
+  z-index: 1;
+  width: 7px;
+  border-radius: 7px;
+}
+
+div.baron._scrollbar > div.baron-track > div.baron-bar {
+  display: block;
+  background-color: rgba(110, 110, 110, 1);
+  opacity: 0;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}

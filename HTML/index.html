@@ -2,400 +2,500 @@
 <html lang="ru">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0" />
-	<meta name="keywords" content="http, 404" />
-	<meta name="description" content="Не удается найти веб-страницу или документ" />
-	<link rel="stylesheet" href="fonts/icomoon/style.css?140120200026" />
-	<link rel="stylesheet" href="fonts/opensans/style.css?140120200026" />
-	<link rel="stylesheet" href="fonts/roboto/style.css?140120200026" />
-	<link rel="stylesheet" href="fonts/robotoslab/style.css?140120200026" />
-	<link rel="stylesheet" href="css/default.css?140120200026" />
-	<link rel="stylesheet" href="css/style.css?140120200026" />
-	<link rel="stylesheet" href="css/header.css?140120200026" />
-	<link rel="stylesheet" href="css/burger.css?140120200026" />
-	<link rel="stylesheet" href="css/workspace.css?140120200026" />
-	<link rel="stylesheet" href="css/aside.css?140120200026" />
-	<link rel="stylesheet" href="css/article.css?140120200026" />
-	<link rel="stylesheet" href="css/footer.css?140120200026" />
-	<link rel="stylesheet" href="css/form.css?140120200026" />
-	<link rel="stylesheet" href="css/nav.css?140120200026" />
-	<script defer src="js/jquery.js?140120200026"></script>
-	<script defer src="js/jquery.throttle-debounce.js?140120200026"></script>
-	<!-- убрать комментирование ниже, если нужен resizable -->
-	<!-- script defer src="js/jquery.resizable.js?140120200026"></script -->
-	<!-- убрать комментирование выше, если нужен resizable -->
-	<script defer src="js/jquery.baron.js?140120200026"></script>
-	<script defer src="js/template.js?140120200026"></script>
-	<script defer src="js/form.js?140120200026"></script>
-	<title>HTTP 404 — не удается найти веб-страницу или документ</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0" />
+  <meta name="keywords" content="http, 404" />
+  <meta name="description" content="Не удается найти веб-страницу или документ" />
+  <link rel="stylesheet" href="fonts/icomoon/style.css?140120200026" />
+  <link rel="stylesheet" href="fonts/content/style.css?140120200026" />
+  <link rel="stylesheet" href="fonts/accent/style.css?140120200026" />
+  <link rel="stylesheet" href="css/default.css?140120200026" />
+  <link rel="stylesheet" href="css/style.css?140120200026" />
+  <link rel="stylesheet" href="css/header.css?140120200026" />
+  <link rel="stylesheet" href="css/burger.css?140120200026" />
+  <link rel="stylesheet" href="css/workspace.css?140120200026" />
+  <link rel="stylesheet" href="css/baron.css?140120200026" />
+  <link rel="stylesheet" href="css/nav.css?140120200026" />
+  <link rel="stylesheet" href="css/breadcrumbs.css?140120200026" />
+  <link rel="stylesheet" href="css/article.css?140120200026" />
+  <link rel="stylesheet" href="css/form.css?140120200026" />
+  <link rel="stylesheet" href="css/footer.menu.css?140120200026" />
+  <link rel="stylesheet" href="css/footer.copyright.css?140120200026" />
+  <link rel="stylesheet" href="css/custom.css?140120200026" />
+  <link rel="stylesheet" href="css/redline.css?140120200026" />
+  <script defer src="json/utheme.json?140120200026"></script>
+  <script defer src="js/jquery.js?140120200026"></script>
+  <script defer src="js/jquery.baron.js?140120200026"></script>
+  <script defer src="js/jquery.throttle-debounce.js?140120200026"></script>
+  <script defer src="js/jquery.inputmask.js?140120200026"></script>
+  <script defer src="js/jquery.template.js?140120200026"></script>
+  <script defer src="js/jquery.form.js?140120200026"></script>
+  <title>HTTP 404 — не удается найти веб-страницу или документ</title>
 </head>
 
-<body onresize="resize();" onload="resize();">
-	<div class="container">
-		<span></span>
-
-		<!-- списки -->
-		<div class="lists utheme">
-			<div class="baron baron__choose">
-				<div class="baron__scroller">
-					<ul>
-						<li data-form="feedback" data-field="utheme">
-							<span>Cотрудничество</span>
-						</li>
-						<li data-form="feedback" data-field="utheme">
-							<span>Хочу у вас работать</span>
-						</li>
-						<li data-form="feedback" data-field="utheme">
-							<span>Условия доставки</span>
-						</li>
-						<li data-form="feedback" data-field="utheme">
-							<span>Условия покупки</span>
-						</li>
-						<li data-form="feedback" data-field="utheme">
-							<span>Наличие товара</span>
-						</li>
-						<li data-form="feedback" data-field="utheme">
-							<span>Другое</span>
-						</li>
-					</ul>
-				</div>
-				<div class="baron__track">
-					<div class="baron__bar"></div>
-				</div>
-			</div>
-		</div>
-		<!-- /списки -->
-
-		<!-- header -->
-		<header>
-			<div>
-				<a class="logo" href="/" title="Море здоровья">
-					<span></span>
-				</a>
-			</div>
-			<ul class="burger">
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</header>
-		<!-- /header -->
-
-		<!-- workspace -->
-		<div class="workspace">
-			<div class="aside">
-				<div class="box">
-					<div class="header">
-						<a class="logo" href="/" title="Море здоровья">
-							<span></span>
-						</a>
-					</div>
-					<div class="phone">
-						<a href="tel:+74959722252" title="+7 (495) 972-22-52">
-							<span>+7 (495) 972-22-52</span>
-						</a>
-					</div>
-					<div class="baron baron__aside">
-						<div class="baron__scroller">
-							<ul>
-								<li>
-									<aside>
-										<ul>
-											<!--li>
-													<div>
-														<strong>
-															<span>Каталог товаров</span>
-														</strong>
-													</div>
-												</li-->
-											<li class="more">
-												<a class="color-hover" href="/catalog/salt/" title="Соль для ванны">
-													<span class="icon salt">
-														<span>Соль для ванны</span>
-													</span>
-												</a>
-												<span></span>
-												<ul>
-													<li>
-														<a class="color-hover" href="/catalog/salt/adult/" title="Взрослым">
-															<span>
-																<span>Взрослым</span>
-															</span>
-														</a>
-													</li>
-													<li>
-														<a class="color-hover" href="/catalog/salt/children/" title="Детям">
-															<span>
-																<span>Детям</span>
-															</span>
-														</a>
-													</li>
-												</ul>
-											</li>
-											<li class="more selected">
-												<div>
-													<span class="icon lamp">
-														<span>Солевые лампы и подсвечники</span>
-													</span>
-												</div>
-												<span></span>
-												<ul>
-													<li>
-														<a class="color-hover" href="/catalog/lamp/1/" title="Лампы">
-															<span>
-																<span>Лампы</span>
-															</span>
-														</a>
-													</li>
-													<li>
-														<a class="color-hover" href="/catalog/lamp/2/" title="Подсвечники">
-															<span>
-																<span>Подсвечники</span>
-															</span>
-														</a>
-													</li>
-													<li>
-														<div>
-															<span>
-																<span>Комплектующие</span>
-															</span>
-														</div>
-													</li>
-												</ul>
-											</li>
-											<li>
-												<a class="color-hover" href="/catalog/fignya/" title="Какая-то фигня">
-													<span>
-														<span>Какая-то фигня</span>
-													</span>
-												</a>
-											</li>
-											<!--li>
-													<div>
-														<p>
-															<span>Не можете найти нужный товар?</span>
-														</p>
-													</div>
-												</li-->
-										</ul>
-									</aside>
-								</li>
-							</ul>
-						</div>
-						<div class="baron__track">
-							<div class="baron__bar"></div>
-						</div>
-					</div>
-				</div>
-				<div class="ui-resizable-handle"></div>
-			</div>
-			<div class="article">
-				<div class="box">
-					<div class="baron baron__article">
-						<div class="baron__scroller">
-							<ul>
-								<li>
-									<article>
-										<div class="content">
-											<div>
-												<h1>HTTP 404</h1>
-												<blockquote>Не удается найти веб-страницу или документ</blockquote>
-											</div>
-											<div>
-												<p>Обозревателю удалось подключиться к веб-узлу, но запрошенная страница не найдена.
-													Возможно, веб-страница временно недоступна.
-													Кроме того, страница может быть изменена, перемещена или удалена.
-													Возможные причины, по которым возникла эта ошибка:</p>
-												<ul>
-													<li>Возможно, сделана опечатка в адресе</li>
-													<li>Если вы перешли по ссылке, возможно, что она устарела</li>
-												</ul>
-											</div>
-										</div>
-									</article>
-								</li>
-								<li>
-									<footer>
-										<div class="form feedback">
-											<div>
-												<span class="accent">Оставьте комментарий</span>
-												<span class="accent">Спасибо!</span>
-												<blockquote>В комментариях запрещено использовать материалы рекламного характера и (или) использовать нецензурную лексику (мат), включая завуалированную.</blockquote>
-												<blockquote>Ваше сообщение успешно отправлено. В ближайшее время с Вами свяжется наш специалист и ответит на все, интересующие Вас, вопросы.</blockquote>
-											</div>
-											<form name="feedback" method="post" action="#">
-												<ul>
-													<li>
-														<div class="accent">
-															<span>Свяжитесь с нами</span>
-														</div>
-													</li>
-													<li>
-														<div class="choose utheme">
-															<input class="field lists" type="text" name="utheme" value="" readonly="readonly" data-form="feedback" data-list="utheme" />
-															<span>Чем мы можем быть полезны?</span>
-														</div>
-													</li>
-												</ul>
-												<ul class="hide utheme">
-													<li>
-														<div class="required">
-															<input class="field" type="text" name="uname" value="" data-form="feedback" />
-															<span>Ваше имя</span>
-														</div>
-													</li>
-													<li>
-														<div class="required">
-															<input class="field" type="text" name="uemail" value="" data-form="feedback" />
-															<span>Ваш E-mail</span>
-														</div>
-													</li>
-												</ul>
-												<ul class="hide utheme">
-													<li>
-														<div>
-															<textarea class="field" name="umessage" data-form="feedback"></textarea>
-															<span>Напишите комментарий</span>
-														</div>
-													</li>
-												</ul>
-												<ol class="hide utheme">
-													<li>
-														<div class="required consent">
-															<input type="checkbox" name="consent" value="Y" />
-															<span class="checkbox" data-form="feedback"></span>
-															<span>Даю согласие на обработку</span>
-															<a href="/policy/" title="персональные данные">персональных данных</a>
-														</div>
-													</li>
-													<li>
-														<div>
-															<button type="button" data-form="feedback"></button>
-														</div>
-													</li>
-												</ol>
-											</form>
-										</div>
-										<div class="footer">
-											<ul>
-												<li>
-													<ul>
-														<li>
-															<a href="#" title="Соль для ванны">
-																<span>Соль для ванны</span>
-															</a>
-															<ol>
-																<li>
-																	<a href="#" title="Взрослым">
-																		<span>Взрослым</span>
-																	</a>
-																</li>
-																<li>
-																	<a href="#" title="Детям">
-																		<span>Детям</span>
-																	</a>
-																</li>
-															</ol>
-															<a href="#" title="Солевые лампы и подсвечники">
-																<span>Солевые лампы и подсвечники</span>
-															</a>
-															<ol>
-																<li>
-																	<a href="#" title="Лампы">
-																		<span>Лампы</span>
-																	</a>
-																</li>
-																<li>
-																	<a href="#" title="Подсвечники">
-																		<span>Подсвечники</span>
-																	</a>
-																</li>
-																<li>
-																	<a href="#" title="Комплектующие">
-																		<span>Комплектующие</span>
-																	</a>
-																</li>
-															</ol>
-														</li>
-														<li>
-															<a href="#" title="Компания">
-																<span>Компания</span>
-															</a>
-															<ol>
-																<li>
-																	<a href="#" title="Доставка">
-																		<span>Доставка</span>
-																	</a>
-																</li>
-																<li>
-																	<a href="#" title="Оплата">
-																		<span>Оплата</span>
-																	</a>
-																</li>
-																<li>
-																	<a href="#" title="Гарантии">
-																		<span>Гарантии</span>
-																	</a>
-																</li>
-															</ol>
-															<a href="#" title="Контакты">
-																<span>Контакты</span>
-															</a>
-														</li>
-													</ul>
-												</li>
-												<li>
-													<a class="logo" href="/" title="Море здоровья">
-														<span></span>
-													</a>
-													<a class="phone" href="tel:+74959722252" title="+7 (495) 972-22-52">
-														<span>+7 (495) 972-22-52</span>
-													</a>
-													<a class="mail" href="mailto:info@site.com" title="info@site.com">
-														<span>info@site.com</span>
-													</a>
-													<ol class="social">
-														<li>
-															<a class="instagram" href="#" title="instagram"></a>
-														</li>
-														<li>
-															<a class="facebook" href="#" title="facebook"></a>
-														</li>
-														<li>
-															<a class="vk" href="#" title="ВКонтакте"></a>
-														</li>
-													</ol>
-												</li>
-											</ul>
-										</div>
-										<div class="footer copyright">
-											<span>© 2019 «Море здоровья»</span><br />
-											<a class="policy" href="/policy/" title="Политика конфиденциальности">
-												<span>Политика конфиденциальности</span>
-											</a>
-											<a class="developer" href="http://www.tarantul.zone/" title="разработка сайта" target="_blank"></a>
-										</div>
-									</footer>
-								</li>
-							</ul>
-						</div>
-						<div class="baron__track">
-							<div class="baron__bar"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /workspace -->
-
-		<!-- nav -->
-		<nav></nav>
-		<!-- /nav -->
-
-	</div>
+<body onresize="isResize();" onload="isResize();">
+  <div class="container">
+    <!-- header -->
+    <div class="header alignment">
+      <ul class="header-ul centering">
+        <li class="header-ul-li header-ul-li-burger">
+          <ul class="burger">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </li>
+        <li class="header-ul-li">
+          <nav class="header-nav">
+            <ul class="header-nav-ul">
+              <li class="header-nav-ul-li">
+                <a class="header-nav-ul-li-element header-nav-ul-li-a" href="#" title="О компании">
+                  <span class="header-nav-ul-li-element-span">О компании</span>
+                </a>
+                <ol class="header-submenu tail tail-left">
+                  <li class="header-submenu-li">
+                    <a class="header-submenu-li-a" href="#" title="Миссия">
+                      <span class="header-submenu-li-a-span">Миссия</span>
+                    </a>
+                  </li>
+                  <li class="header-submenu-li">
+                    <a class="header-submenu-li-a" href="#" title="Цели и задачи">
+                      <span class="header-submenu-li-a-span">Цели и задачи</span>
+                    </a>
+                  </li>
+                  <li class="header-submenu-li">
+                    <a class="header-submenu-li-a" href="#" title="Вакансии">
+                      <span class="header-submenu-li-a-span">Вакансии</span>
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li class="header-nav-ul-li">
+                <a class="header-nav-ul-li-element header-nav-ul-li-a" href="#" title="Доставка">
+                  <span class="header-nav-ul-li-element-span">Доставка</span>
+                </a>
+              </li>
+              <li class="header-nav-ul-li">
+                <span class="header-nav-ul-li-element header-nav-ul-li-span">
+                  <span class="header-nav-ul-li-element-span">Оплата</span>
+                </span>
+              </li>
+              <li class="header-nav-ul-li">
+                <a class="header-nav-ul-li-element header-nav-ul-li-a" href="#" title="Контакты">
+                  <span class="header-nav-ul-li-element-span">Контакты</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </li>
+        <li class="header-ul-li header-ul-li-logo">
+          <a class="logo header-logo" href="/" title="Море здоровья">
+            <span class="header-logo-span logo-span"></span>
+          </a>
+        </li>
+        <li class="header-ul-li">
+          <a class="phone header-phone" href="tel:+74959722252" title="+7 (495) 972-22-52">
+            <span class="accent header-phone-span phone-span">+7 (495) 972-22-52</span>
+          </a>
+          <ol class="header-icons">
+            <li class="header-icons-li">
+              <a class="header-icons-a header-icon-basket" href="#" title="Корзина">
+                <span class="header-icons-info">6</span>
+              </a>
+              <div class="informer tail tail-right">
+                <span class="informer-span">В корзине 6 товаров на 5 090</span>
+                <a class="informer-a" href="/cart/" title="Оформить заказ">
+                  <span class="informer-a-span">Оформить заказ</span>
+                </a>
+              </div>
+            </li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+    <!-- /header -->
+    <!-- workspace -->
+    <div class="workspace">
+      <div>
+        <div class="box">
+          <div>
+            <a class="logo aside-logo" href="/" title="Море здоровья">
+              <span class="aside-logo-span logo-span"></span>
+            </a>
+            <a class="phone aside-phone" href="tel:+74959722252" title="+7 (495) 972-22-52">
+              <span class="accent aside-phone-span phone-span">+7 (495) 972-22-52</span>
+            </a>
+          </div>
+          <div class="baron baron-nav">
+            <div class="baron-scroller">
+              <ul>
+                <!-- nav -->
+                <li>
+                  <nav>
+                    <ul>
+                      <li class="more selected">
+                        <a href="/catalog/salt/" title="Соль для ванны">
+                          <span class="icon salt">
+                            <span>Соль для ванны</span>
+                          </span>
+                        </a>
+                        <span></span>
+                        <ul>
+                          <li>
+                            <a href="/catalog/salt/1/" title="Взрослым">
+                              <span>
+                                <span>Взрослым</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="/catalog/salt/2/" title="Детям">
+                              <span>
+                                <span>Детям</span>
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="more selected">
+                        <div>
+                          <span class="icon lamp">
+                            <span>Солевые лампы и подсвечники</span>
+                          </span>
+                        </div>
+                        <span></span>
+                        <ul>
+                          <li>
+                            <a href="/catalog/lamp/1/" title="Лампы">
+                              <span>
+                                <span>Лампы</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="/catalog/lamp/2/" title="Подсвечники">
+                              <span>
+                                <span>Подсвечники</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <div>
+                              <span>
+                                <span>Комплектующие</span>
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="/catalog/fignya/" title="Какая-то фигня">
+                          <span>
+                            <span>Какая-то фигня</span>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </li>
+                <!-- /nav -->
+                <!-- nav -->
+                <li>
+                  <nav>
+                    <ul>
+                      <li class="more">
+                        <a href="/about/" title="О компании">
+                          <span>
+                            <span>О компании</span>
+                          </span>
+                        </a>
+                        <span></span>
+                        <ul>
+                          <li>
+                            <a href="/about/1/" title="Миссия">
+                              <span>
+                                <span>Миссия</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="/about/2/" title="Цели и задачи">
+                              <span>
+                                <span>Цели и задачи</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <div>
+                              <span>
+                                <span>Вакансии</span>
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="/delivery/" title="Доставка">
+                          <span>
+                            <span>Доставка</span>
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <div>
+                          <span>
+                            <span>Оплата</span>
+                          </span>
+                        </div>
+                      </li>
+                      <li>
+                        <a href="/contacts/" title="Контакты">
+                          <span>
+                            <span>Контакты</span>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </li>
+                <!-- /nav -->
+              </ul>
+            </div>
+            <div class="baron-track">
+              <div class="baron-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="box">
+          <span></span>
+          <div></div>
+          <div class="baron baron-article">
+            <div class="baron-scroller">
+              <ul>
+                <!-- article -->
+                <li>
+                  <div class="alignment">
+                    <ul class="centering breadcrumbs">
+                      <li class="breadcrumbs-li">
+                        <a class="breadcrumbs-element" href="#" title="Море здоровья">Море здоровья</a>
+                      </li>
+                      <li class="breadcrumbs-li">
+                        <a class="breadcrumbs-element" href="#" title="Солевые лампы и подсвечники">Солевые лампы и подсвечники</a>
+                      </li>
+                      <li class="breadcrumbs-li">
+                        <a class="breadcrumbs-element" href="#" title="Комплектующие">Комплектующие</a>
+                      </li>
+                      <li class="breadcrumbs-li">
+                        <span class="breadcrumbs-element">HTTP 404</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <article>
+                    <div class="content">
+                      <header class="centering">
+                        <h1>http 404</h1>
+                        <blockquote>Не удается найти веб-страницу или документ</blockquote>
+                      </header>
+                      <div class="centering">
+                        <p>Обозревателю удалось подключиться к веб-узлу, но запрошенная страница не найдена.
+                          Возможно, веб-страница временно недоступна.
+                          Кроме того, страница может быть изменена, перемещена или удалена.
+                          Возможные причины, по которым возникла эта ошибка:</p>
+                        <ul>
+                          <li>Возможно, сделана опечатка в адресе</li>
+                          <li>Если вы перешли по ссылке, возможно, что она устарела</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+                <!-- /article -->
+                <!-- footer -->
+                <li>
+                  <footer class="alignment">
+                    <div class="form feedback">
+                      <div>
+                        <span class="accent">Оставьте комментарий</span>
+                        <span class="accent">Спасибо!</span>
+                        <blockquote>В комментариях запрещено использовать материалы рекламного характера и (или) использовать нецензурную лексику (мат), включая завуалированную.</blockquote>
+                        <blockquote>Ваше сообщение успешно отправлено. В ближайшее время с Вами свяжется наш специалист и ответит на все, интересующие Вас, вопросы.</blockquote>
+                      </div>
+                      <form name="feedback" method="post" action="#">
+                        <ul>
+                          <li>
+                            <div class="accent">
+                              <span>Свяжитесь с нами</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="choose utheme">
+                              <input class="field" type="text" name="utheme" value="" readonly="readonly" data-form="feedback" data-list="utheme" />
+                              <span>Тема обращения</span>
+                            </div>
+                          </li>
+                        </ul>
+                        <ul class="hide utheme">
+                          <li>
+                            <div class="required">
+                              <input class="field" type="text" name="uname" value="" data-form="feedback" data-check="name" />
+                              <span>Имя</span>
+                            </div>
+                            <div class="required">
+                              <input class="field" type="email" name="uemail" value="" data-form="feedback" data-check="email" />
+                              <span>E-mail</span>
+                            </div>
+                            <div class="required">
+                              <input class="field" type="tel" name="uphone" value="" data-form="feedback" data-check="phone" />
+                              <span>Телефон</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="textarea">
+                              <textarea class="field" name="umessage" data-form="feedback"></textarea>
+                              <span>Сопроводительное письмо</span>
+                            </div>
+                          </li>
+                        </ul>
+                        <ol class="hide utheme">
+                          <li>
+                            <div class="required consent">
+                              <input type="checkbox" name="consent" value="Y" />
+                              <span class="checkbox" data-form="feedback"></span>
+                              <span>Даю согласие на обработку</span>
+                              <a href="/policy/" title="персональные данные">персональных данных</a>
+                            </div>
+                          </li>
+                          <li>
+                            <div>
+                              <button type="button" data-form="feedback"></button>
+                            </div>
+                          </li>
+                        </ol>
+                      </form>
+                    </div>
+                    <div class="footer centering menu">
+                      <ul>
+                        <li>
+                          <ul>
+                            <li>
+                              <span>
+                                <span>Соль для ванны</span>
+                              </span>
+                              <ol>
+                                <li>
+                                  <a href="#" title="Взрослым">
+                                    <span>Взрослым</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#" title="Детям">
+                                    <span>Детям</span>
+                                  </a>
+                                </li>
+                              </ol>
+                              <a href="#" title="Солевые лампы и подсвечники">
+                                <span>Солевые лампы и подсвечники</span>
+                              </a>
+                              <ol>
+                                <li>
+                                  <a href="#" title="Лампы">
+                                    <span>Лампы</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#" title="Подсвечники">
+                                    <span>Подсвечники</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#" title="Комплектующие">
+                                    <span>Комплектующие</span>
+                                  </a>
+                                </li>
+                              </ol>
+                            </li>
+                            <li>
+                              <a href="#" title="О компании">
+                                <span>О компании</span>
+                              </a>
+                              <ol>
+                                <li>
+                                  <a href="/about/1/" title="Миссия">
+                                    <span>Миссия</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/about/2/" title="Цели и задачи">
+                                    <span>Цели и задачи</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <span>
+                                    <span>Вакансии</span>
+                                  </span>
+                                </li>
+                              </ol>
+                              <a href="#" title="Доставка">
+                                <span>Доставка</span>
+                              </a>
+                              <span>
+                                <span>Оплата</span>
+                              </span>
+                              <a href="#" title="Контакты">
+                                <span>Контакты</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a class="logo footer-logo" href="/" title="Море здоровья">
+                            <span class="footer-logo-span logo-span"></span>
+                          </a>
+                          <a class="phone footer-phone" href="tel:+74959722252" title="+7 (495) 972-22-52">
+                            <span class="accent footer-phone-span phone-span">+7 (495) 972-22-52</span>
+                          </a>
+                          <a class="mail" href="mailto:info@site.com" title="info@site.com">
+                            <span>info@site.com</span>
+                          </a>
+                          <ol class="social">
+                            <li>
+                              <a class="instagram" href="#" title="instagram"></a>
+                            </li>
+                            <li>
+                              <a class="facebook" href="#" title="facebook"></a>
+                            </li>
+                            <li>
+                              <a class="vk" href="#" title="ВКонтакте"></a>
+                            </li>
+                          </ol>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="footer centering copyright">
+                      <span>© 2019 «Море здоровья»</span><br />
+                      <a class="policy" href="/policy/" title="Политика конфиденциальности">
+                        <span>Политика конфиденциальности</span>
+                      </a>
+                      <a class="developer" href="https://www.tarantul.zone/" title="разработка сайта" target="_blank"></a>
+                    </div>
+                  </footer>
+                </li>
+                <!-- /footer -->
+              </ul>
+            </div>
+            <div class="baron-track">
+              <div class="baron-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /workspace -->
+  </div>
 </body>
 
 </html>

@@ -4,7 +4,6 @@ var aside = "div.container > div.workspace > div.aside",
 	menuHeight = null,
 	baron__aside = null,
 	baron__article = null,
-	baron__choose = null,
 	baron__scroller = "div.baron > div.baron__scroller",
 	baron__bar = "div.baron > div.baron__track > div.baron__bar",
 	el = null;
@@ -56,7 +55,8 @@ function resize() {
 
 $(document).ready(function () {
 	"use strict";
-	if ($(aside).outerWidth() >= 270) {
+
+	/* if ($(aside).outerWidth() >= 270) {
 		if (!$(aside).hasClass("max")) {
 			$(aside).removeClass("min").addClass("max");
 		}
@@ -64,7 +64,8 @@ $(document).ready(function () {
 		if (!$(aside).hasClass("min")) {
 			$(aside).removeClass("max").addClass("min");
 		}
-	}
+	} */
+
 	/* убрать комментирование ниже, если нужен resizable */
 	/* aside.resizable({
 		handles : "e",
@@ -75,13 +76,18 @@ $(document).ready(function () {
 			}
 		}); */
 	/* убрать комментирование выше, если нужен resizable */
-	if ($(aside).find("div.ui-resizable-handle").lenght !== 0) {
+	/* if ($(aside).find("div.ui-resizable-handle").lenght !== 0) {
 		$(aside).find("div.ui-resizable-handle").append('<ul><li></li></ul>');
-	}
+	} */
 	$(aside).find("div.ui-resizable-handle > ul > li:first-child").on("touchstart mousedown", function (e) {
 		e.preventDefault();
-		if (!$(aside).hasClass("min") && $(aside).hasClass("max")) {
-			$(aside).removeClass("max").addClass("min");
+		if ($(aside).outerWidth() > 50) {
+			if ($(aside).hasClass("max")) {
+				$(aside).removeClass("max");
+			}
+			if (!$(aside).hasClass("min")) {
+				$(aside).addClass("min");
+			}
 			$(aside).animate({
 				width: "2.5em"
 			}, 250, function () {
@@ -89,7 +95,12 @@ $(document).ready(function () {
 				baron__article.update();
 			});
 		} else {
-			$(aside).removeClass("min").addClass("max");
+			if (!$(aside).hasClass("max")) {
+				$(aside).addClass("max");
+			}
+			if ($(aside).hasClass("min")) {
+				$(aside).removeClass("min");
+			}
 			$(aside).animate({
 				width: asideWidth
 			}, 250, function () {

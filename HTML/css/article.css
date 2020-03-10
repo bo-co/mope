@@ -1,80 +1,167 @@
 @charset "UTF-8";
 
 article {
-	position: relative;
-	width: 100%;
+  position: relative;
+  width: 100%;
+  background-color: inherit;
 }
 
 article > div.content {
-	position: inherit;
-	padding: 0.5rem 1rem;
+  position: inherit;
+  padding: 0.5rem 1rem;
+}
+
+article > div.content > div,
+article > div.content > header {
+  padding: 0.5rem 0;
 }
 
 article > div.content > div {
-	position: inherit;
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 0.5rem 0;
-}
-
-article > div.content > div h1 {
-	position: inherit;
-	padding: 0 0 0.5rem 0;
-	text-transform: uppercase;
-	line-height: 1em;
-	color: rgba(0, 0, 0, 1);
-}
-
-article > div.content > div h1::before {
-	position: absolute;
-	top: calc(100% - 0.25rem + 2px);
-	left: calc(50% - 0.5rem);
-	z-index: 10;
-	width: 1rem;
-	height: 2px;
-	content: "";
-	background-color: rgba(105, 155, 245, 1);
+  font-size: 0.9em;
 }
 
 article > div.content > div h1,
-article > div.content > div blockquote {
-	text-align: center;
+article > div.content > div h2,
+article > div.content > div h3,
+article > div.content > div h4,
+article > div.content > header h1,
+article > div.content > header h2,
+article > div.content > header h3 {
+  font-family: "accent", Arial, Tahoma, Verdana, sans-serif;
+  font-weight: 600;
 }
 
-article > div.content > div blockquote {
-	font-size: 1.2em;
+article > div.content > div h1,
+article > div.content > div h2,
+article > div.content > div h3,
+article > div.content > div h4,
+article > div.content > header h1 {
+  position: inherit;
+  color: rgba(0, 0, 0, 1);
+}
+
+article > div.content > div h1,
+article > div.content > div h2,
+article > div.content > div h3,
+article > div.content > div h4 {
+  padding: 0.5em 0;
+}
+
+article > div.content > div h1,
+article > div.content > header h1 {
+  padding: 0 0 0.5rem 0;
+  text-transform: uppercase;
+}
+
+article > div.content > div h1::before,
+article > div.content > header h1::before {
+  position: absolute;
+  top: calc(100% - 0.25rem);
+  left: calc(50% - 1em);
+  z-index: 10;
+  width: 2em;
+  height: 2px;
+  content: "";
+  background-color: rgba(105, 155, 245, 1);
+}
+
+article > div.content > div h1,
+article > div.content > div blockquote,
+article > div.content > header h1,
+article > div.content > header blockquote {
+  text-align: center;
+}
+
+article > div.content > div blockquote,
+article > div.content > header blockquote {
+  font-size: 1.1em;
 }
 
 article > div.content > div ul {
-	list-style: disc;
+  list-style: disc;
 }
 
 @media (min-width : 1201px) {
-	article > div.content > div > h1 {
-		font-size: 1.8em;
-	}
+
+  article > div.content > div > h1,
+  article > div.content > div > h2,
+  article > div.content > header h1 {
+    font-size: 1.8em;
+  }
+
+  article > div.content > div > h3 {
+    font-size: 1.7em;
+  }
+
+  article > div.content > div > h4 {
+    font-size: 1.6em;
+  }
 }
 
 @media (min-width : 961px) and (max-width : 1200px) {
-	article > div.content > div > h1 {
-		font-size: 1.7em;
-	}
+
+  article > div.content > div > h1,
+  article > div.content > div > h2,
+  article > div.content > header h1 {
+    font-size: 1.7em;
+  }
+
+  article > div.content > div > h3 {
+    font-size: 1.6em;
+  }
+
+  article > div.content > div > h4 {
+    font-size: 1.5em;
+  }
 }
 
 @media (min-width : 721px) and (max-width : 960px) {
-	article > div.content > div > h1 {
-		font-size: 1.6em;
-	}
+
+  article > div.content > div > h1,
+  article > div.content > header h1,
+  article > div.content > div > h2 {
+    font-size: 1.6em;
+  }
+
+  article > div.content > div > h3 {
+    font-size: 1.5em;
+  }
+
+  article > div.content > div > h4 {
+    font-size: 1.4em;
+  }
 }
 
 @media (min-width : 481px) and (max-width : 720px) {
-	article > div.content > div > h1 {
-		font-size: 1.5em;
-	}
+
+  article > div.content > div > h1,
+  article > div.content > header h1,
+  article > div.content > div > h2 {
+    font-size: 1.5em;
+  }
+
+  article > div.content > div > h3 {
+    font-size: 1.4em;
+  }
+
+  article > div.content > div > h4 {
+    font-size: 1.3em;
+  }
 }
 
 @media (max-width : 480px) {
-	article > div.content > div > h1 {
-		font-size: 1.4em;
-	}
+
+  article > div.content > div > h1,
+  article > div.content > div > h2,
+  article > div.content > header h1 {
+    font-size: 1.4em;
+  }
+
+  article > div.content > div > h3 {
+    font-size: 1.3em;
+  }
+
+  article > div.content > div > h4 {
+    font-size: 1.2em;
+  }
 }

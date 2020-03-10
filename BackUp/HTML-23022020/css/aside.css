@@ -1,14 +1,35 @@
 @charset "UTF-8";
 
+div.container > div.workspace > div.aside {
+	z-index: 10;
+	width: 16em;
+	min-width: 0;
+	max-width: 16em;
+	background-color: rgba(252, 252, 252, 1);
+	box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+div.container > div.workspace > div.aside::after {
+	position: absolute;
+	left: calc(100% - 1px);
+	bottom: 0;
+	z-index: 10;
+	height: 100%;
+	width: 1px;
+	background-color: rgba(60, 66, 73, 0.1);
+	content: "";
+}
+
 aside {
-	padding: 0.5rem 0;
+	/* padding: 0.5rem 0; */
+	padding: 1em 0;
 }
 
 aside,
 div.container > div.workspace > div.aside > div.box > div.phone,
 div.container > div.workspace > div.aside > div.box > div.header {
 	width: 100%;
-	min-width: 13.5em;
+	min-width: 16em;
 }
 
 div.container > div.workspace > div.aside > div.box > div.phone,
@@ -17,7 +38,7 @@ div.container > div.workspace > div.aside > div.box > div.header {
 }
 
 div.container > div.workspace > div.aside > div.box > div.header > a.logo {
-	width: 8.5em;
+	width: calc(100% - 5em);
 	margin: 0 auto;
 	text-decoration: none;
 }
@@ -108,7 +129,8 @@ aside > ul > li > ul > li > a,
 aside > ul > li > div,
 aside > ul > li > ul > li > div {
 	position: inherit;
-	width: calc(8.5em + (100% - 8.5em)/2 + 2.5em);
+	width: 100%;
+	/* width: calc(8.5em + (100% - 8.5em)/2 + 2.5em); */
 	padding-left: 2.5em;
 	padding-right: 2.5em;
 }
@@ -117,10 +139,14 @@ aside > ul > li > a > span > span,
 aside > ul > li > div > span > span,
 aside > ul > li > ul > li > a > span > span,
 aside > ul > li > ul > li > div > span > span,
-aside > ul > li > div > strong > span,
 aside > ul > li > div > p > span {
 	display: block;
 }
+
+/* aside > ul > li.menu > div > span > span {
+	font-weight: 600;
+	text-transform: uppercase;
+} */
 
 aside > ul > li > a > span > span,
 aside > ul > li > div > span > span {
@@ -128,8 +154,7 @@ aside > ul > li > div > span > span {
 }
 
 aside > ul > li > a > span > span,
-aside > ul > li > div > span > span,
-aside > ul > li > div > strong > span {
+aside > ul > li > div > span > span {
 	font-size: 0.9em;
 	line-height: 1.35em;
 }
@@ -145,27 +170,41 @@ aside > ul > li > a,
 aside > ul > li > ul > li > a {
 	display: block;
 	text-decoration: none;
-	color: rgba(60, 66, 73, 0.5);
 	transition: color .3s ease;
+}
+
+div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller > ul > li > aside > ul > li > a,
+div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller > ul > li > aside > ul > li > ul > li > a {
+	color: rgba(60, 66, 73, 0.5);
+}
+
+div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller > ul > li.nav > aside > ul > li > a,
+div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller > ul > li.nav > aside > ul > li > ul > li > a {
+	color: rgba(252, 252, 252, 1);
+}
+
+div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller > ul > li.nav > aside > ul > li > a:hover,
+div.container > div.workspace > div.aside > div.box > div.baron > div.baron__scroller > ul > li.nav > aside > ul > li > ul > li > a:hover {
+	color: rgba(60, 66, 73, 1);
 }
 
 aside > ul > li > a > span,
 aside > ul > li > ul > li > a > span,
 aside > ul > li > div > span,
 aside > ul > li > ul > li > div > span,
-aside > ul > li > div > strong,
-aside > ul > li > ul > li > div > strong,
+/* aside > ul > li > div > strong,
+aside > ul > li > ul > li > div > strong, */
 aside > ul > li > div > p {
 	position: inherit;
 	display: block;
-	max-width: 8.5em;
+	/* max-width: 10em; */
 	margin: 0 0 0 auto;
 }
 
-aside > ul > li > strong,
+/* aside > ul > li > strong, */
 aside > ul > li > a > span,
 aside > ul > li > div > span,
-aside > ul > li > div > strong,
+/* aside > ul > li > div > strong, */
 aside > ul > li > div > p {
 	padding-top: 0.65em;
 	padding-bottom: 0.65em;
@@ -177,14 +216,15 @@ aside > ul > li > div > span.icon::after {
 	top: 0;
 	right: 100%;
 	z-index: 1;
-	width: 2.1em;
+	width: 2em;
+	height: 2em;
 	background-repeat: no-repeat;
 	background-size: 1.2em auto;
 	background-position: 50% 50%;
 	font-size: 1.2em;
 	font-family: "icomoon" !important;
 	text-align: center;
-	line-height: 2.1em;
+	line-height: 2em;
 }
 
 aside > ul > li > a > span.icon.salt::after,
@@ -201,7 +241,7 @@ aside > ul > li > a + span,
 aside > ul > li > div + span {
 	position: absolute;
 	top: 0;
-	left: calc(8.5em + (100% - 8.5em)/2);
+	right: 0;
 	z-index: 10;
 	width: 2.5em;
 	height: 2.5em;
@@ -218,7 +258,7 @@ aside > ul > li > div + span::after {
 	width: 10px;
 	height: 2px;
 	content: "";
-	background-color: rgba(60, 66, 73, 0.5);
+	background-color: rgba(180, 180, 180, 1);
 	transition: all .3s ease;
 }
 
@@ -236,7 +276,7 @@ aside > ul > li > div + span::before {
 
 aside > ul > li > a + span::after,
 aside > ul > li > div + span::after {
-	left: calc(50% - 1px);
+	left: calc(50% - 2px);
 }
 
 aside > ul > li > a + span::after,
@@ -271,7 +311,7 @@ aside > ul > li > ul > li > div > span {
 
 @media (min-width : 961px) {
 	div.container > div.workspace > div.aside > div.box > div.header > a.logo {
-		height: 4.5em;
+		height: 6em;
 	}
 }
 

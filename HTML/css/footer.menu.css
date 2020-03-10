@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+footer > div.footer.menu > ul > li > a.mail,
+footer > div.footer.menu > ul > li > ul > li > ol > li > a,
+footer > div.footer.menu > ul > li > ul > li > a > span {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+footer > div.footer.menu > ul > li > a.phone,
+footer > div.footer.menu > ul > li > a.mail,
+footer > div.footer.menu > ul > li > ul > li > a,
+footer > div.footer.menu > ul > li > ul > li > ol > li > a {
+  text-decoration: none;
+}
+
+footer > div.footer.menu > ul,
+footer > div.footer.menu > ul > li > ul,
+footer > div.footer.menu > ul > li > ul > li > ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+}
+
+footer > div.footer.menu > ul,
+footer > div.footer.menu > ul > li > ul {
+  padding: 0;
+}
+
+footer > div.footer.menu > ul > li {
+  position: relative;
+  padding: 1.5em 0;
+}
+
+.footer-logo,
+.footer-phone,
+footer > div.footer.menu > ul > li > a.mail {
+  width: 8.5em;
+  margin: 0 auto 1em auto;
+}
+
+.footer-phone::before {
+  font-size: .71em;
+  line-height: 1;
+}
+
+.footer-logo-span {
+  height: 1.8em;
+  background-image: url(../img/logo.footer.svg?091020191529);
+}
+
+footer > div.footer.menu > ul > li > a.mail,
+footer > div.footer.menu > ul > li > a.mail > span {
+  display: block;
+}
+
+footer > div.footer.menu > ul > li > a.mail {
+  position: relative;
+  padding-left: 1.5em;
+}
+
+footer > div.footer.menu > ul > li > a.mail::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  font-family: "icomoon" !important;
+  text-align: center;
+  content: "\e902";
+}
+
+footer > div.footer.menu > ul > li > a.mail > span {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+
+footer > div.footer.menu > ul > li > ul > li > a,
+footer > div.footer.menu > ul > li > ul > li > a > span,
+footer > div.footer.menu > ul > li > ul > li > ol > li > a,
+footer > div.footer.menu > ul > li > ul > li > ol > li > a > span,
+footer > div.footer.menu > ul > li > ul > li > span,
+footer > div.footer.menu > ul > li > ul > li > span > span,
+footer > div.footer.menu > ul > li > ul > li > ol > li > span,
+footer > div.footer.menu > ul > li > ul > li > ol > li > span > span {
+  display: inline-block;
+}
+
+footer > div.footer.menu > ul > li > ul > li > a,
+footer > div.footer.menu > ul > li > ul > li > span,
+footer > div.footer.menu > ul > li > ul > li > ol {
+  padding: 0 0 .5em 0;
+}
+
+footer > div.footer.menu > ul > li > ul > li > span,
+footer > div.footer.menu > ul > li > ul > li > ol > li > span,
+footer > div.footer.menu > ul > li > ul > li > a,
+footer > div.footer.menu > ul > li > ul > li > ol > li > a {
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+
+footer > div.footer.menu > ul > li > ul > li > span,
+footer > div.footer.menu > ul > li > ul > li > a {
+  display: block;
+  font-weight: 500;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+footer > div.footer.menu > ul > li > ul > li > ol > li > span,
+footer > div.footer.menu > ul > li > ul > li > ol > li > a {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+footer > div.footer.menu > ul > li > ul > li > ol > li {
+  width: 100%;
+}
+
+@media (min-width : 1201px) {
+  footer > div.footer.menu > ul > li:first-child {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  footer > div.footer.menu > ul > li:last-child {
+    min-width: calc(8.5em + 1rem);
+    padding-left: 1rem;
+  }
+
+  footer > div.footer.menu > ul > li:last-child::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 1px;
+    height: calc(100% - 0.5rem);
+    content: "";
+  }
+
+  footer > div.footer.menu > ul > li > ul > li {
+    width: 50%;
+    min-width: 7em;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width : 961px) and (max-width : 1200px) {
+  footer > div.footer.menu > ul > li:first-child {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  footer > div.footer.menu > ul > li:last-child {
+    min-width: calc(8.5em + 1rem);
+    padding-left: 1rem;
+  }
+
+  footer > div.footer.menu > ul > li:last-child::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 1px;
+    height: calc(100% - 0.5rem);
+    content: "";
+  }
+
+  footer > div.footer.menu > ul > li > ul > li {
+    width: 50%;
+    min-width: 7em;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width : 721px) and (max-width : 960px) {
+  footer > div.footer.menu > ul > li:first-child {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  footer > div.footer.menu > ul > li:last-child {
+    min-width: calc(8.5em + 1rem);
+    padding-left: 1rem;
+  }
+
+  footer > div.footer.menu > ul > li:last-child::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 1px;
+    height: calc(100% - 0.5rem);
+    content: "";
+  }
+
+  footer > div.footer.menu > ul > li > ul > li {
+    width: 50%;
+    min-width: 7em;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width : 481px) and (max-width : 720px) {
+  footer > div.footer.menu > ul > li {
+    width: 100%;
+  }
+
+  footer > div.footer.menu > ul > li:first-child {
+    display: none;
+  }
+
+  footer > div.footer.menu > ul > li > ul > li {
+    width: 50%;
+    min-width: 7em;
+  }
+
+  footer > div.footer.menu > ul > li > ul > li:first-child {
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width : 480px) {
+  footer > div.footer.menu > ul > li {
+    width: 100%;
+  }
+
+  footer > div.footer.menu > ul > li:first-child {
+    display: none;
+  }
+
+  footer > div.footer.menu > ul > li > ul > li {
+    width: 100%;
+  }
+}

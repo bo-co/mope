@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+footer > div.footer.copyright {
+  padding: 1.5em 0;
+  font-size: 0.8em;
+}
+
+footer > div.footer.copyright > span,
+footer > div.footer.copyright > a,
+footer > div.footer.copyright > a > span {
+  display: inline-block;
+}
+
+footer > div.footer.copyright > a.developer {
+  display: block;
+  z-index: 10;
+  width: 11.2em;
+  height: 3.1em;
+  background-image: url(../img/developer.svg?301120190201);
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0.9em;
+  line-height: 1;
+}
+
+footer > div.footer.copyright > a.developer::after {
+  display: block;
+  position: absolute;
+  top: calc(100% - 0.75em);
+  right: 0;
+  z-index: 10;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  content: "разработка сайта";
+  white-space: nowrap;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+@media (min-width : 1201px) {
+  footer > div.copyright > a.developer {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 2em);
+  }
+}
+
+@media (min-width : 961px) and (max-width : 1200px) {
+  footer > div.copyright > a.developer {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 2em);
+  }
+}
+
+@media (min-width : 721px) and (max-width : 960px) {
+  footer > div.copyright > a.developer {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 2em);
+  }
+}
+
+@media (min-width : 481px) and (max-width : 720px) {
+  footer > div.copyright > span::after {
+    display: none;
+  }
+
+  footer > div.copyright > a.developer {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 2em);
+  }
+}
+
+@media (max-width : 480px) {
+  footer > div.copyright > span::after {
+    display: none;
+  }
+
+  footer > div.copyright > a.developer {
+    position: relative;
+    margin: 0.5rem 0;
+  }
+}

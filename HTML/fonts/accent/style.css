@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "accent";
+	font-display: swap;
+	src: local("RobotoSlabLight"), local("Roboto Slab Light"), local("RobotoSlab-Light"), local("Roboto-Slab-Light"), url("RobotoSlabLight.eot");
+	src: url("RobotoSlabLight.eot?#iefix")format("embedded-opentype"), url("RobotoSlabLight.woff") format("woff"), url("RobotoSlabLight.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: "accent";
+	font-display: swap;
+	src: local("RobotoSlabRegular"), local("Roboto Slab Regular"), local("RobotoSlab-Regular"), local("Roboto-Slab-Regular"), url("RobotoSlabRegular.eot");
+	src: url("RobotoSlabRegular.eot?#iefix")format("embedded-opentype"), url("RobotoSlabRegular.woff") format("woff"), url("RobotoSlabRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "accent";
+	font-display: swap;
+	src: local("RobotoSlabBold"), local("Roboto Slab Bold"), local("RobotoSlab-Bold"), local("Roboto-Slab-Bold"), url("RobotoSlabBold.eot");
+	src: url("RobotoSlabBold.eot?#iefix")format("embedded-opentype"), url("RobotoSlabBold.woff") format("woff"), url("RobotoSlabBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 600;
+}
