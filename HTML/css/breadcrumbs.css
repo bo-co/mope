@@ -6,7 +6,7 @@
   display: -ms-flexbox;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: .5em 0;
+  padding: .75em 0;
   list-style: none;
   overflow: hidden;
 }
