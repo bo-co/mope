@@ -32,11 +32,15 @@ strong,
 .phone,
 .logo {
   display: block;
-  overflow: hidden;
+  position: relative;
 }
 
 .phone::before {
   display: inherit;
+  position: absolute;
+  top: calc(50% - 1.8em);
+  left: 0;
+  z-index: 1;
   font-weight: 300;
   white-space: nowrap;
   content: "Бесплатная консультация";
@@ -77,14 +81,9 @@ strong,
 }
 
 a {
-  color: rgba(105, 155, 245, 1);
   text-decoration: none;
   transition: color .3s ease;
   -webkit-transition: color .3s ease;
-}
-
-a:hover {
-  color: rgba(65, 105, 165, 1);
 }
 
 div.container {

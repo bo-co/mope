@@ -83,7 +83,7 @@ div.container > div.workspace > div:first-child > div.box > div:first-child {
 }
 
 .aside-phone {
-  padding: 0.5em 0 0 0;
+  padding: .5em 0;
 }
 
 .aside-phone::before {
@@ -91,6 +91,8 @@ div.container > div.workspace > div:first-child > div.box > div:first-child {
 }
 
 .aside-phone-span {
+  padding: .5em 0;
+  margin-top: 1em;
   text-align: center;
   white-space: nowrap;
   -webkit-transform: scale(1.29);

@@ -57,19 +57,12 @@ article > div.content > div h1::before,
 article > div.content > header h1::before {
   position: absolute;
   top: calc(100% - 0.25rem);
-  left: calc(50% - 1em);
+  left: 0;
   z-index: 10;
   width: 2em;
   height: 2px;
   content: "";
   background-color: rgba(105, 155, 245, 1);
-}
-
-article > div.content > div h1,
-article > div.content > div blockquote,
-article > div.content > header h1,
-article > div.content > header blockquote {
-  text-align: center;
 }
 
 article > div.content > div blockquote,
