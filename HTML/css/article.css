@@ -11,12 +11,8 @@ article > div.content {
   padding: 0.5rem 1rem;
 }
 
-article > div.content > div,
-article > div.content > header {
-  padding: 0.5rem 0;
-}
-
 article > div.content > div {
+  padding: 0.5rem 0;
   font-size: 0.9em;
 }
 
@@ -50,7 +46,6 @@ article > div.content > div h4 {
 article > div.content > div h1,
 article > div.content > header h1 {
   padding: 0 0 0.5rem 0;
-  text-transform: uppercase;
 }
 
 article > div.content > div h1::before,
