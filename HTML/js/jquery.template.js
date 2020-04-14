@@ -25,6 +25,9 @@ function isResize() {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
     vhCSS = true;
+  } else {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
   }
   setTimeout(function () {
     baron__nav.update();

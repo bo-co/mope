@@ -43,7 +43,7 @@ article > div.content > div h4 {
   padding: 0.5em 0;
 }
 
-article > div.content > div h1,
+/* article > div.content > div h1,
 article > div.content > header h1 {
   padding: 0 0 0.5rem 0;
 }
@@ -58,7 +58,7 @@ article > div.content > header h1::before {
   height: 2px;
   content: "";
   background-color: rgba(105, 155, 245, 1);
-}
+} */
 
 article > div.content > div blockquote,
 article > div.content > header blockquote {
